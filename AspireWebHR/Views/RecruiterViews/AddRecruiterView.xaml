@@ -1,0 +1,586 @@
+﻿<Window x:Class="AspireWebHR.Views.RecruiterViews.AddRecruiterView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AspireWebHR.Views.RecruiterViews"
+        mc:Ignorable="d"
+        Title="AddRecruiterView" Height="800" Width="1300" ResizeMode="NoResize">
+    <Grid
+        Background="GhostWhite">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="25"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="11"
+            Background="Purple">
+
+            <Viewbox
+                Grid.Row="0"
+                Grid.Column="0"
+                Stretch="Uniform">
+
+                <StackPanel
+                    Orientation="Horizontal">
+                    <Image
+                        Source="../../assets/add-recruiter.png"
+                        Height="60"
+                        Width="60"
+                        Margin="0, 0, 50, 0"/>
+
+                    <Label
+                        Content="Employee Information \ معلومات الموظف"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="25"
+                        FontFamily="Bahnschrift Bold SemiCondensed"
+                        Foreground="White"/>
+                </StackPanel>
+            </Viewbox>
+        </Grid>
+
+
+
+        <!--ViewBox No.1 && Row No. 1-->
+        <Viewbox
+            Grid.Row="2"
+            Grid.Column="1"
+            Grid.ColumnSpan="9"
+            Margin="0, 2.5, 0, 0">
+
+            <Border
+                BorderBrush="Black"
+                BorderThickness="0.3">
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Employee ID: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            x:Name="txtBox_EmployeeID"
+                            Height="10"
+                            Width="55"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Title: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            x:Name="txtBox_Title"
+                            Height="10"
+                            Width="55"
+                            BorderThickness="0.3"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="First Name: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            x:Name="txtBox_FirstName"
+                            Height="10"
+                            Width="55"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"                            
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Middle Name: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            x:Name="txtBox_MiddleName"
+                            Height="10"
+                            Width="55"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"                            
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+
+                </StackPanel>
+            </Border>
+        </Viewbox>
+
+        <!--ViewBox No.2 && Row No. 2-->
+
+        <Viewbox
+            Grid.Row="3"
+            Grid.Column="1"
+            Grid.ColumnSpan="9"
+            Margin="0, 2.5, 0, 0">
+
+            <Border
+                BorderBrush="Black"
+                BorderThickness="0.3">
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Last Name: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            x:Name="txtBox_LastName"
+                            Height="10"
+                            Width="55"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"                            
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Age: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            x:Name="txtBox_Age"
+                            Height="10"
+                            Width="55"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Mobile Number: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            x:Name="txtBox_MobileNumber"
+                            Height="10"
+                            Width="55"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Email ID: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            x:Name="txtBox_EmailID"
+                            Height="10"
+                            Width="55"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"                            
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 10, 0"/>
+                    </StackPanel>
+
+                </StackPanel>
+            </Border>
+        </Viewbox>
+
+        <!--ViewBox No.3 && Row No. 3-->
+
+        <Viewbox
+            Grid.Row="4"
+            Grid.Column="1"
+            Grid.ColumnSpan="9"
+            Margin="0, 2.5, 0, 0">
+
+            <Border
+                BorderBrush="Black"
+                BorderThickness="0.3">
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Nationality: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            x:Name="txtBox_Nationality"
+                            Height="10"
+                            Width="55"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"                                            
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Address: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            x:Name="txtBox_Address"
+                            Height="10"
+                            Width="55"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"                
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Birthdate: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+                        <Viewbox
+                            Height="10"
+                            Width="55">
+                            <DatePicker 
+                                BorderThickness="0.3"
+                                BorderBrush="Black"
+                                Margin="0, 0, 5, 0"
+                                FontSize="10"
+                                FontFamily="Bahnschrift"/>
+                        </Viewbox>
+                    </StackPanel>
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Gender: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <ComboBox
+                            x:Name="cbBox_Gender"
+                            Height="10"
+                            Width="55"
+                            BorderThickness="0.2"
+                            BorderBrush="Black"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"
+                            Margin="0, 0, 10, 0"/>
+                    </StackPanel>
+
+                </StackPanel>
+            </Border>
+        </Viewbox>
+
+        <!--ViewBox No.3 && Row No. 3-->
+        
+        <Viewbox
+            Grid.Row="5"
+            Grid.Column="1"
+            Grid.ColumnSpan="9"
+            Margin="0, 2.5, 0, 0">
+
+            <Border
+                BorderBrush="Black"
+                BorderThickness="0.3">
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Marital Status: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <ComboBox
+                            x:Name="cbBox_MaritalStatus"
+                            Height="10"
+                            Width="55"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"                            
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Hire Date: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <Viewbox
+                            Height="10"
+                            Width="55">
+                            <DatePicker 
+                                BorderThickness="0.3"
+                                BorderBrush="Black"
+                                Margin="0, 0, 5, 0"
+                                FontSize="10"
+                                FontFamily="Bahnschrift"/>
+                        </Viewbox>
+                    </StackPanel>
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Supervisor Name: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            x:Name="txtBox_SupervisorName"
+                            Height="10"
+                            Width="55"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"                
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Department: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <ComboBox
+                            x:Name="cbBox_Department"
+                            Height="10"
+                            Width="55"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"                
+                            Margin="0, 0, 10, 0"/>
+                    </StackPanel>
+
+                </StackPanel>
+            </Border>
+        </Viewbox>
+
+        <Viewbox
+            Grid.Row="6"
+            Grid.Column="1"
+            Grid.ColumnSpan="9"
+            Margin="0, 2.5, 0, 0">
+
+            <Border
+                BorderBrush="Black"
+                BorderThickness="0.3">
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Employee Salary: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            Height="10"
+                            Width="55"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"                            
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Medical Leaves Allowed: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <Viewbox
+                            Height="10"
+                            Width="55">
+                            <TextBox 
+                                Height="10"
+                                Width="55"
+                                BorderThickness="0.3"
+                                BorderBrush="Black"
+                                Margin="0, 0, 5, 0"
+                                FontSize="5"
+                                FontFamily="Bahnschrift"/>
+                        </Viewbox>
+                    </StackPanel>
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Non Medical Leaves Allowed: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            Height="10"
+                            Width="55"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"                
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+
+                </StackPanel>
+            </Border>
+        </Viewbox>
+
+
+        <Viewbox
+            Grid.Row="7"
+            Grid.RowSpan="3"
+            Grid.Column="1"
+            Grid.ColumnSpan="9"
+            Margin="0, 2.5, 0, 0">
+
+            <Border 
+                BorderBrush="Black"
+                BorderThickness="0.3">
+                <StackPanel
+                    Orientation="Vertical"
+                    HorizontalAlignment="Center">
+
+
+                    <Label
+                        Content="Notes:"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="5"
+                        FontFamily="Bahnschrift Bold SemiCondensed"
+                        Foreground="Black"/>
+
+                    <TextBox
+                        Height="50"
+                        Width="100"
+                        FontFamily="Bahnschrift"
+                        FontSize="5"
+                        BorderThickness="0.3">
+                    </TextBox>
+                    
+                </StackPanel>
+            </Border>
+        </Viewbox>
+
+        <Viewbox
+            Grid.Row="10"
+            Grid.Column="1"
+            Grid.RowSpan="1"
+            Grid.ColumnSpan="10"
+            Margin="0, 2.5, 0, 0">
+
+            <Border 
+                BorderBrush="Black"
+                BorderThickness="0.3"
+                Margin="0, 10, 0, 0">
+                <StackPanel
+                    Orientation="Vertical"
+                    HorizontalAlignment="Center">
+
+
+                    <Button
+                        BorderBrush="Black"
+                        BorderThickness="0"
+                        Height="20"
+                        Width="60"
+                        Content="Submit"
+                        FontSize="8"
+                        FontFamily="Bahnschrift Bold SemiCondensed"/>
+
+
+
+
+
+                </StackPanel>
+            </Border>
+        </Viewbox>
+
+    </Grid>
+</Window>

@@ -1,0 +1,624 @@
+﻿<Window x:Class="AspireWebHR.Views.CandidateViews.AddCandidateView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AspireWebHR.Views.CandidateViews"
+        mc:Ignorable="d"
+        Title="Add Candidates" Height="800" Width="1300" ResizeMode="CanResizeWithGrip">
+    <Grid
+        Background="GhostWhite">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="25"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="11"
+            Background="Purple">
+            <!--Title ViewBox for Candidate Addition Window-->
+            <Viewbox
+                Grid.Row="0"
+                Grid.Column="0"
+                Stretch="Uniform">
+
+                <StackPanel
+                    Orientation="Horizontal">
+                    <Image
+                        Source="../../assets/add-recruiter.png"
+                        Height="60"
+                        Width="60"
+                        Margin="0, 0, 50, 0"/>
+
+                    <Label
+                        Content="Candidate Information \ معلومات المرشح"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="25"
+                        FontFamily="Bahnschrift Bold SemiCondensed"
+                        Foreground="White"/>
+                </StackPanel>
+            </Viewbox>
+        </Grid>
+
+        <Viewbox
+            Grid.Row="2"
+            Grid.Column="1"
+            Grid.ColumnSpan="9"
+            Margin="0, 2.5, 0, 0">
+
+            <Border
+                BorderBrush="Black"
+                BorderThickness="0.3">
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Date: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            Height="10"
+                            Width="55"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="First Name: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            Height="10"
+                            Width="55"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Middle Name: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            Height="10"
+                            Width="55"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Last Name: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            Height="10"
+                            Width="55"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+
+                </StackPanel>
+            </Border>
+        </Viewbox>
+
+        <Viewbox
+            Grid.Row="3"
+            Grid.Column="1"
+            Grid.ColumnSpan="9"
+            Margin="0, 2.5, 0, 0">
+
+            <Border
+                BorderBrush="Black"
+                BorderThickness="0.3">
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Age: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            Height="10"
+                            Width="55"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Mobile Number: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            Height="10"
+                            Width="55"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Email: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            Height="10"
+                            Width="55"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Marital Status: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            Height="10"
+                            Width="55"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 10, 0"/>
+                    </StackPanel>
+
+                </StackPanel>
+            </Border>
+        </Viewbox>
+
+        <Viewbox
+            Grid.Row="4"
+            Grid.Column="1"
+            Grid.ColumnSpan="9"
+            Margin="0, 2.5, 0, 0">
+
+            <Border
+                BorderBrush="Black"
+                BorderThickness="0.3">
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Nationality: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            Height="10"
+                            Width="55"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Address: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            Height="10"
+                            Width="55"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Birthdate: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            Height="10"
+                            Width="55"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Gender: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            Height="10"
+                            Width="55"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 10, 0"/>
+                    </StackPanel>
+
+                </StackPanel>
+            </Border>
+        </Viewbox>
+
+        <Viewbox
+            Grid.Row="5"
+            Grid.Column="1"
+            Grid.RowSpan="3"
+            Grid.ColumnSpan="9"
+            Margin="0, 2.5, 0, 0">
+
+            <Border
+                BorderBrush="Black"
+                BorderThickness="0.3">
+                <StackPanel
+                    Orientation="Vertical"
+                    HorizontalAlignment="Center">
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Company Name"
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"
+                            Margin="10, 0, 0, 0"/>
+
+                        <Label
+                            Content="Job Title"
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"
+                            Margin="20, 0, 0, 0"/>
+
+                        <Label
+                            Content="Salary"
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"
+                            Margin="30, 0, 0, 0"/>
+
+                        <Label
+                            Content="Duration"
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"
+                            Margin="30, 0, 0, 0"/>
+
+                        <Label
+                            Content="Reason For Leaving"
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"
+                            Margin="20, 0, 0, 0"/>
+                    </StackPanel>
+                    
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <TextBox
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"
+                            Width="50"
+                            Height="8"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="5, 0, 5, 2"/>
+
+                        <TextBox
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"
+                            Width="50"
+                            Height="8"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 2"/>
+
+                        <TextBox
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"
+                            Width="50"
+                            Height="8"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 2"/>
+
+                        <TextBox
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"
+                            Width="50"
+                            Height="8"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 2"/>
+
+                        <TextBox
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"
+                            Width="50"
+                            Height="8"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 2"/>
+                    </StackPanel>
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <TextBox
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"
+                            Width="50"
+                            Height="8"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="5, 0, 5, 2"/>
+
+                        <TextBox
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"
+                            Width="50"
+                            Height="8"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 2"/>
+
+                        <TextBox
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"
+                            Width="50"
+                            Height="8"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 2"/>
+
+                        <TextBox
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"
+                            Width="50"
+                            Height="8"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 2"/>
+
+                        <TextBox
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"
+                            Width="50"
+                            Height="8"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 2"/>
+                    </StackPanel>
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <TextBox
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"
+                            Width="50"
+                            Height="8"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="5, 0, 5, 2"/>
+
+                        <TextBox
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"
+                            Width="50"
+                            Height="8"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 2"/>
+
+                        <TextBox
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"
+                            Width="50"
+                            Height="8"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 2"/>
+
+                        <TextBox
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"
+                            Width="50"
+                            Height="8"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 2"/>
+
+                        <TextBox
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"
+                            Width="50"
+                            Height="8"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 2"/>
+                    </StackPanel>
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <TextBox
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"
+                            Width="50"
+                            Height="8"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="5, 0, 5, 2"/>
+
+                        <TextBox
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"
+                            Width="50"
+                            Height="8"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 2"/>
+
+                        <TextBox
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"
+                            Width="50"
+                            Height="8"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 2"/>
+
+                        <TextBox
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"
+                            Width="50"
+                            Height="8"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 2"/>
+
+                        <TextBox
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"
+                            Width="50"
+                            Height="8"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 2"/>
+                    </StackPanel>
+
+
+                </StackPanel>
+            </Border>
+        </Viewbox>
+
+
+
+        <Viewbox
+            Grid.Row="8"
+            Grid.Column="0"
+            Grid.RowSpan="1"
+            Grid.ColumnSpan="9"
+            Margin="0, 0, 0, 0">
+
+            <Border 
+                BorderBrush="Black"
+                BorderThickness="0.3"
+                Margin="0, 10, 0, 0">
+                
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Left">
+
+
+                    <Label
+                        Content="Reference Name: "
+                        FontSize="8"
+                        FontFamily="Bahnschrift Bold SemiCondensed"/>
+
+                    <TextBox
+                            FontFamily="Bahnschrift"
+                            FontSize="8"
+                            Width="100"
+                            Height="13"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="10, 0, 5, 2"/>
+
+
+
+
+                </StackPanel>
+            </Border>
+        </Viewbox>
+
+
+
+        <Viewbox
+            Grid.Row="10"
+            Grid.Column="1"
+            Grid.RowSpan="1"
+            Grid.ColumnSpan="10"
+            Margin="0, 2.5, 0, 0">
+
+            <Border 
+                BorderBrush="Black"
+                BorderThickness="0.3"
+                Margin="0, 10, 0, 0">
+                <StackPanel
+                    Orientation="Vertical"
+                    HorizontalAlignment="Center">
+
+
+                    <Button
+                        BorderBrush="Black"
+                        BorderThickness="0"
+                        Height="20"
+                        Width="60"
+                        Content="Submit"
+                        FontSize="8"
+                        FontFamily="Bahnschrift Bold SemiCondensed"/>
+                </StackPanel>
+            </Border>
+        </Viewbox>
+
+
+
+    </Grid>
+</Window>
