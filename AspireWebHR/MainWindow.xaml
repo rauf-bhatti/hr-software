@@ -43,6 +43,7 @@
                     Grid.Column="0"
                     Grid.ColumnSpan="4"
                     Grid.RowSpan="6">
+
                     <Image
                         Source="assets/aspire-web-logo.png"
                         Height="25"
@@ -52,13 +53,14 @@
 
                     <TextBlock
                         TextWrapping="Wrap"
-                        FontFamily="Bahnschrift SemiBold SemiCondensed"
+                        FontFamily="Bahnschrift Light"
                         Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
                         Height="20"
                         Width="40"
                         FontSize="1.3"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
+                        Foreground="Black"
                         Margin="0, 0, 0, 0">
                     </TextBlock>
                 </StackPanel>
@@ -71,13 +73,12 @@
             Grid.RowSpan="6"
             Grid.ColumnSpan="5">
             <StackPanel>
-
                 <TextBlock
                     Text="Login to continue to your HRMS management account."
-                    Width="65"
+                    Width="70"
                     TextWrapping="WrapWithOverflow"
                     FontSize="5"
-                    FontFamily="Bahnschrift Semi SemiCondensed"
+                    FontFamily="Bahnschrift SemiBold SemiCondensed"
                     HorizontalAlignment="Center"
                     Margin="0, 10, 0, 2.5"
                     Foreground="SteelBlue"
@@ -152,7 +153,8 @@
                     Margin="0, 10, 0, 25"
                     BorderBrush="Black"
                     BorderThickness="0.2"
-                    HorizontalAlignment="Center"></Button>
+                    HorizontalAlignment="Center"
+                    Click="Button_Click"></Button>
             </StackPanel>
         </Viewbox>
         

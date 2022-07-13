@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AspireWebHR.Views;
 
 namespace AspireWebHR
 {
@@ -23,6 +24,14 @@ namespace AspireWebHR
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Dashboard viewDashboard = new Dashboard();
+            this.Hide();
+            viewDashboard.ShowDialog();
+            this.Close();
         }
     }
 }

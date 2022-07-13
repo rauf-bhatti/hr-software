@@ -7,15 +7,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="assets\add-recruiter.png" />
     <None Remove="assets\aspire-web-logo.png" />
     <None Remove="assets\border-image.png" />
     <None Remove="assets\building.jpg" />
     <None Remove="assets\login-logo.png" />
     <None Remove="assets\password-logo.png" />
+    <None Remove="assets\profile.png" />
     <None Remove="assets\username-logo.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="assets\add-recruiter.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="assets\aspire-web-logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -31,9 +36,21 @@
     <Resource Include="assets\password-logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="assets\profile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="assets\username-logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql" Version="6.0.5" />
   </ItemGroup>
 
 </Project>
