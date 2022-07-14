@@ -7,7 +7,7 @@ using Npgsql;
 
 namespace AspireWebHR.Database
 {
-    class Database
+    public class Database
     {
         private NpgsqlConnection connection = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["DBConn"].ConnectionString);
 
@@ -21,7 +21,6 @@ namespace AspireWebHR.Database
                 connection.Open();
             }
         }
-
 
         public dynamic RunValidationQuery(string query)
         {
