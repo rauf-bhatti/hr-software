@@ -90,12 +90,18 @@
                             FontFamily="Bahnschrift Bold SemiCondensed"
                             FontSize="5"/>
 
-                        <TextBox
+                        <Viewbox
                             Height="10"
-                            Width="55"
-                            BorderThickness="0.3"
-                            BorderBrush="Black"
-                            Margin="0, 0, 5, 0"/>
+                            Width="55">
+                            
+                            <DatePicker 
+                                x:Name="datePicker_EntryDate"
+                                BorderThickness="0.3"
+                                BorderBrush="Black"
+                                Margin="0, 0, 5, 0"
+                                FontSize="10"
+                                FontFamily="Bahnschrift"/>
+                        </Viewbox>
                     </StackPanel>
 
 
@@ -107,8 +113,11 @@
                             FontSize="5"/>
 
                         <TextBox
+                            x:Name="txtBox_FirstName"
                             Height="10"
                             Width="55"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"           
                             BorderThickness="0.3"
                             BorderBrush="Black"
                             Margin="0, 0, 5, 0"/>
@@ -122,8 +131,11 @@
                             FontSize="5"/>
 
                         <TextBox
+                            x:Name="txtBox_MiddleName"
                             Height="10"
                             Width="55"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"
                             BorderThickness="0.3"
                             BorderBrush="Black"
                             Margin="0, 0, 5, 0"/>
@@ -137,8 +149,11 @@
                             FontSize="5"/>
 
                         <TextBox
+                            x:Name="txtBox_LastName"
                             Height="10"
                             Width="55"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"
                             BorderThickness="0.3"
                             BorderBrush="Black"
                             Margin="0, 0, 5, 0"/>
@@ -169,8 +184,11 @@
                             FontSize="5"/>
 
                         <TextBox
+                            x:Name="txtBox_Age"
                             Height="10"
                             Width="55"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"
                             BorderThickness="0.3"
                             BorderBrush="Black"
                             Margin="0, 0, 5, 0"/>
@@ -185,8 +203,11 @@
                             FontSize="5"/>
 
                         <TextBox
+                            x:Name="txtBox_MobileNumber"
                             Height="10"
                             Width="55"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"
                             BorderThickness="0.3"
                             BorderBrush="Black"
                             Margin="0, 0, 5, 0"/>
@@ -200,8 +221,11 @@
                             FontSize="5"/>
 
                         <TextBox
+                            x:Name="txtBox_EmailID"
                             Height="10"
                             Width="55"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"
                             BorderThickness="0.3"
                             BorderBrush="Black"
                             Margin="0, 0, 5, 0"/>
@@ -214,10 +238,13 @@
                             FontFamily="Bahnschrift Bold SemiCondensed"
                             FontSize="5"/>
 
-                        <TextBox
+                        <ComboBox
+                            x:Name="cbBox_MaritalStatus"
                             Height="10"
                             Width="55"
                             BorderThickness="0.3"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"
                             BorderBrush="Black"
                             Margin="0, 0, 10, 0"/>
                     </StackPanel>
@@ -247,8 +274,11 @@
                             FontSize="5"/>
 
                         <TextBox
+                            x:Name="txtBox_Nationality"
                             Height="10"
                             Width="55"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"
                             BorderThickness="0.3"
                             BorderBrush="Black"
                             Margin="0, 0, 5, 0"/>
@@ -263,8 +293,11 @@
                             FontSize="5"/>
 
                         <TextBox
+                            x:Name="txtBox_Address"
                             Height="10"
                             Width="55"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"
                             BorderThickness="0.3"
                             BorderBrush="Black"
                             Margin="0, 0, 5, 0"/>
@@ -277,12 +310,18 @@
                             FontFamily="Bahnschrift Bold SemiCondensed"
                             FontSize="5"/>
 
-                        <TextBox
+
+                        <Viewbox
                             Height="10"
-                            Width="55"
-                            BorderThickness="0.3"
-                            BorderBrush="Black"
-                            Margin="0, 0, 5, 0"/>
+                            Width="55">
+                            <DatePicker 
+                                x:Name="datePicker_BirthDate"
+                                BorderThickness="0.3"
+                                BorderBrush="Black"
+                                Margin="0, 0, 5, 0"
+                                FontSize="10"
+                                FontFamily="Bahnschrift"/>
+                        </Viewbox>
                     </StackPanel>
 
                     <StackPanel
@@ -292,9 +331,12 @@
                             FontFamily="Bahnschrift Bold SemiCondensed"
                             FontSize="5"/>
 
-                        <TextBox
+                        <ComboBox
+                            x:Name="cbBox_Gender"
                             Height="10"
                             Width="55"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"
                             BorderThickness="0.3"
                             BorderBrush="Black"
                             Margin="0, 0, 10, 0"/>
@@ -354,6 +396,7 @@
                     <StackPanel
                         Orientation="Horizontal">
                         <TextBox
+                            x:Name="txtBox_C0"
                             FontFamily="Bahnschrift Bold SemiCondensed"
                             FontSize="5"
                             Width="50"
@@ -363,6 +406,7 @@
                             Margin="5, 0, 5, 2"/>
 
                         <TextBox
+                            x:Name="txtBox_J0"
                             FontFamily="Bahnschrift Bold SemiCondensed"
                             FontSize="5"
                             Width="50"
@@ -372,6 +416,7 @@
                             Margin="0, 0, 5, 2"/>
 
                         <TextBox
+                            x:Name="txtBox_S0"
                             FontFamily="Bahnschrift Bold SemiCondensed"
                             FontSize="5"
                             Width="50"
@@ -381,6 +426,7 @@
                             Margin="0, 0, 5, 2"/>
 
                         <TextBox
+                            x:Name="txtBox_D0"
                             FontFamily="Bahnschrift Bold SemiCondensed"
                             FontSize="5"
                             Width="50"
@@ -390,6 +436,7 @@
                             Margin="0, 0, 5, 2"/>
 
                         <TextBox
+                            x:Name="txtBox_R0"
                             FontFamily="Bahnschrift Bold SemiCondensed"
                             FontSize="5"
                             Width="50"
@@ -402,6 +449,7 @@
                     <StackPanel
                         Orientation="Horizontal">
                         <TextBox
+                            x:Name="txtBox_C1"
                             FontFamily="Bahnschrift Bold SemiCondensed"
                             FontSize="5"
                             Width="50"
@@ -411,6 +459,7 @@
                             Margin="5, 0, 5, 2"/>
 
                         <TextBox
+                            x:Name="txtBox_J1"
                             FontFamily="Bahnschrift Bold SemiCondensed"
                             FontSize="5"
                             Width="50"
@@ -420,6 +469,7 @@
                             Margin="0, 0, 5, 2"/>
 
                         <TextBox
+                            x:Name="txtBox_S1"
                             FontFamily="Bahnschrift Bold SemiCondensed"
                             FontSize="5"
                             Width="50"
@@ -429,6 +479,7 @@
                             Margin="0, 0, 5, 2"/>
 
                         <TextBox
+                            x:Name="txtBox_D1"
                             FontFamily="Bahnschrift Bold SemiCondensed"
                             FontSize="5"
                             Width="50"
@@ -438,6 +489,7 @@
                             Margin="0, 0, 5, 2"/>
 
                         <TextBox
+                            x:Name="txtBox_R1"
                             FontFamily="Bahnschrift Bold SemiCondensed"
                             FontSize="5"
                             Width="50"
@@ -450,6 +502,7 @@
                     <StackPanel
                         Orientation="Horizontal">
                         <TextBox
+                            x:Name="txtBox_C2"
                             FontFamily="Bahnschrift Bold SemiCondensed"
                             FontSize="5"
                             Width="50"
@@ -459,6 +512,7 @@
                             Margin="5, 0, 5, 2"/>
 
                         <TextBox
+                            x:Name="txtBox_J2"
                             FontFamily="Bahnschrift Bold SemiCondensed"
                             FontSize="5"
                             Width="50"
@@ -468,6 +522,7 @@
                             Margin="0, 0, 5, 2"/>
 
                         <TextBox
+                            x:Name="txtBox_S2"
                             FontFamily="Bahnschrift Bold SemiCondensed"
                             FontSize="5"
                             Width="50"
@@ -477,6 +532,7 @@
                             Margin="0, 0, 5, 2"/>
 
                         <TextBox
+                            x:Name="txtBox_D2"
                             FontFamily="Bahnschrift Bold SemiCondensed"
                             FontSize="5"
                             Width="50"
@@ -486,6 +542,7 @@
                             Margin="0, 0, 5, 2"/>
 
                         <TextBox
+                            x:Name="txtBox_R2"
                             FontFamily="Bahnschrift Bold SemiCondensed"
                             FontSize="5"
                             Width="50"
@@ -498,6 +555,7 @@
                     <StackPanel
                         Orientation="Horizontal">
                         <TextBox
+                            x:Name="txtBox_C3"
                             FontFamily="Bahnschrift Bold SemiCondensed"
                             FontSize="5"
                             Width="50"
@@ -507,6 +565,7 @@
                             Margin="5, 0, 5, 2"/>
 
                         <TextBox
+                            x:Name="txtBox_J3"
                             FontFamily="Bahnschrift Bold SemiCondensed"
                             FontSize="5"
                             Width="50"
@@ -516,6 +575,7 @@
                             Margin="0, 0, 5, 2"/>
 
                         <TextBox
+                            x:Name="txtBox_S3"
                             FontFamily="Bahnschrift Bold SemiCondensed"
                             FontSize="5"
                             Width="50"
@@ -525,6 +585,7 @@
                             Margin="0, 0, 5, 2"/>
 
                         <TextBox
+                            x:Name="txtBox_D3"
                             FontFamily="Bahnschrift Bold SemiCondensed"
                             FontSize="5"
                             Width="50"
@@ -534,6 +595,7 @@
                             Margin="0, 0, 5, 2"/>
 
                         <TextBox
+                            x:Name="txtBox_R3"
                             FontFamily="Bahnschrift Bold SemiCondensed"
                             FontSize="5"
                             Width="50"
@@ -542,8 +604,6 @@
                             BorderBrush="Black"
                             Margin="0, 0, 5, 2"/>
                     </StackPanel>
-
-
                 </StackPanel>
             </Border>
         </Viewbox>
@@ -580,10 +640,6 @@
                             BorderThickness="0.3"
                             BorderBrush="Black"
                             Margin="10, 0, 5, 2"/>
-
-
-
-
                 </StackPanel>
             </Border>
         </Viewbox>
@@ -607,13 +663,15 @@
 
 
                     <Button
+                        x:Name="btn_Submit"
                         BorderBrush="Black"
                         BorderThickness="0"
                         Height="20"
                         Width="60"
                         Content="Submit"
                         FontSize="8"
-                        FontFamily="Bahnschrift Bold SemiCondensed"/>
+                        FontFamily="Bahnschrift Bold SemiCondensed"
+                        />
                 </StackPanel>
             </Border>
         </Viewbox>

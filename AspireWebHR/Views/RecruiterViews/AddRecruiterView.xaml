@@ -317,6 +317,7 @@
                             Height="10"
                             Width="55">
                             <DatePicker 
+                                x:Name="datePicker_Birthdate"
                                 BorderThickness="0.3"
                                 BorderBrush="Black"
                                 Margin="0, 0, 5, 0"
@@ -340,7 +341,11 @@
                             BorderBrush="Black"
                             FontFamily="Bahnschrift"
                             FontSize="5"
-                            Margin="0, 0, 10, 0"/>
+                            Margin="0, 0, 10, 0">
+                            <ComboBoxItem Content="Male"></ComboBoxItem>
+                            <ComboBoxItem Content="Female"></ComboBoxItem>
+                            <ComboBoxItem Content="Other"></ComboBoxItem>
+                        </ComboBox>
                     </StackPanel>
 
                 </StackPanel>
@@ -377,7 +382,12 @@
                             BorderBrush="Black"
                             FontFamily="Bahnschrift"
                             FontSize="5"                            
-                            Margin="0, 0, 5, 0"/>
+                            Margin="0, 0, 5, 0">
+
+                            <ComboBoxItem Content="Unmarried"></ComboBoxItem>
+                            <ComboBoxItem Content="Married"></ComboBoxItem>
+                            <ComboBoxItem Content="Widowed"></ComboBoxItem>
+                        </ComboBox>
                     </StackPanel>
 
 
@@ -392,6 +402,7 @@
                             Height="10"
                             Width="55">
                             <DatePicker 
+                                x:Name="datePicker_HireDate"
                                 BorderThickness="0.3"
                                 BorderBrush="Black"
                                 Margin="0, 0, 5, 0"
@@ -433,7 +444,9 @@
                             BorderBrush="Black"
                             FontFamily="Bahnschrift"
                             FontSize="5"                
-                            Margin="0, 0, 10, 0"/>
+                            Margin="0, 0, 10, 0">
+                            <ComboBoxItem Content="Married"></ComboBoxItem>
+                        </ComboBox>
                     </StackPanel>
 
                 </StackPanel>
@@ -461,6 +474,7 @@
                             FontSize="5"/>
 
                         <TextBox
+                            x:Name="txtBox_Salary"
                             Height="10"
                             Width="55"
                             BorderThickness="0.3"
@@ -482,6 +496,7 @@
                             Height="10"
                             Width="55">
                             <TextBox 
+                                x:Name="txtBox_MedLeaves"
                                 Height="10"
                                 Width="55"
                                 BorderThickness="0.3"
@@ -500,6 +515,7 @@
                             FontSize="5"/>
 
                         <TextBox
+                            x:Name="txtBox_NonMedLeaves"
                             Height="10"
                             Width="55"
                             BorderThickness="0.3"
@@ -538,6 +554,7 @@
                         Foreground="Black"/>
 
                     <TextBox
+                        x:Name="txtBox_Notes"
                         Height="50"
                         Width="100"
                         FontFamily="Bahnschrift"
@@ -566,18 +583,15 @@
 
 
                     <Button
+                        x:Name="btn_SubmitRecruiter"
                         BorderBrush="Black"
                         BorderThickness="0"
                         Height="20"
                         Width="60"
                         Content="Submit"
                         FontSize="8"
-                        FontFamily="Bahnschrift Bold SemiCondensed"/>
-
-
-
-
-
+                        FontFamily="Bahnschrift Bold SemiCondensed"
+                        Click="btn_SubmitRecruiter_Click"/>
                 </StackPanel>
             </Border>
         </Viewbox>
