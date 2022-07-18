@@ -15,7 +15,7 @@ namespace AspireWebHR.Models
         public ExperienceModel(string CompanyName, string JobTitle, int Salary, int Duration, string LeavingReason)
         {
 
-            if (CompanyName.Equals(""))
+            if (CompanyName == null || JobTitle == null || Duration == 0 || Salary == 0 || LeavingReason == null)
             {
                 return; //Ensuring that an empty object is not made!
             }
@@ -25,6 +25,12 @@ namespace AspireWebHR.Models
             this.Salary = Salary;
             this.Duration = Duration;
             this.LeavingReason = LeavingReason;
+        }
+
+        public string QueryizeExperience(int index)
+        {
+            return $"INSERT INTO Job_History (CANDIDATE_ID, CompanyName, JobTitle, Salary, Duration, LeavingReason)" +
+                $" VALUES ('{index}', '{CompanyName}', '{JobTitle}', '{Salary}', '{Duration}', '{LeavingReason}')";
         }
     }
 }
