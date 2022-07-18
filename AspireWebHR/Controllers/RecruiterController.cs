@@ -10,8 +10,6 @@ namespace AspireWebHR.Controllers
     {
         private RecruiterValidator recruiterValidator = new RecruiterValidator();
 
-
-
         public bool AddRecruiter(string EmployeeID, string FirstName, string MiddleName, string LastName, int Age, string MobileNumber, string EmailID, string Nationality,
              string Address, DateTime BirthDate, string Gender, string MaritalStatus, DateTime HireDate, string SupervisorName, string Department, int Salary, int Medical_Leaves,
              int Non_Medical_Leaves, string Notes)
