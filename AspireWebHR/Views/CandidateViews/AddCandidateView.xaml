@@ -246,7 +246,11 @@
                             FontFamily="Bahnschrift"
                             FontSize="5"
                             BorderBrush="Black"
-                            Margin="0, 0, 10, 0"/>
+                            Margin="0, 0, 10, 0">
+                            <ComboBoxItem Content="Male"></ComboBoxItem>
+                            <ComboBoxItem Content="Female"></ComboBoxItem>
+                            <ComboBoxItem Content="Other"></ComboBoxItem>
+                        </ComboBox>
                     </StackPanel>
 
                 </StackPanel>
@@ -339,7 +343,11 @@
                             FontSize="5"
                             BorderThickness="0.3"
                             BorderBrush="Black"
-                            Margin="0, 0, 10, 0"/>
+                            Margin="0, 0, 10, 0">
+                            <ComboBoxItem Content="Male"></ComboBoxItem>
+                            <ComboBoxItem Content="Female"></ComboBoxItem>
+                            <ComboBoxItem Content="Other"></ComboBoxItem>
+                        </ComboBox>
                     </StackPanel>
 
                 </StackPanel>
@@ -633,6 +641,7 @@
                         FontFamily="Bahnschrift Bold SemiCondensed"/>
 
                     <TextBox
+                            x:Name="txtBox_ReferenceName"
                             FontFamily="Bahnschrift"
                             FontSize="8"
                             Width="100"
@@ -671,6 +680,7 @@
                         Content="Submit"
                         FontSize="8"
                         FontFamily="Bahnschrift Bold SemiCondensed"
+                        Click="btn_Submit_Click"
                         />
                 </StackPanel>
             </Border>

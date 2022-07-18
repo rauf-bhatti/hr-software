@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using AspireWebHR.Controllers;
 
 namespace AspireWebHR.Views.CandidateViews
 {
@@ -17,9 +18,57 @@ namespace AspireWebHR.Views.CandidateViews
     /// </summary>
     public partial class AddCandidateView : Window
     {
+        private CandidateController candidateController = new CandidateController();
+
         public AddCandidateView()
         {
             InitializeComponent();
+        }
+
+        private void btn_Submit_Click(object sender, RoutedEventArgs e)
+        {
+
+            try
+            {
+                ComboBoxItem gender = (ComboBoxItem)cbBox_Gender.SelectedItem;
+                ComboBoxItem marital_status = (ComboBoxItem)cbBox_MaritalStatus.SelectedItem;
+
+                if (txtBox_C0.Text.Length < 1)
+                {
+                    txtBox_D0.Text = "0";
+                    txtBox_S0.Text = "0";
+                }
+
+                if (txtBox_C1.Text.Length < 1)
+                {
+                    txtBox_D1.Text = "0";
+                    txtBox_S1.Text = "0";
+                }
+
+                if (txtBox_C2.Text.Length < 1)
+                {
+                    txtBox_D2.Text = "0";
+                    txtBox_S2.Text = "0";
+                }
+
+                if (txtBox_C3.Text.Length < 1)
+                {
+                    txtBox_D3.Text = "0";
+                    txtBox_S3.Text = "0";
+                }
+
+
+
+                candidateController.AddCandidate((DateTime)datePicker_EntryDate.SelectedDate, txtBox_FirstName.Text, txtBox_MiddleName.Text, txtBox_LastName.Text, Convert.ToInt32(txtBox_Age.Text), txtBox_MobileNumber.Text, txtBox_EmailID.Text,
+                    marital_status.Content.ToString(), txtBox_Nationality.Text, txtBox_Address.Text, (DateTime)datePicker_BirthDate.SelectedDate, gender.Content.ToString(), txtBox_ReferenceName.Text, txtBox_C0.Text, txtBox_J0.Text, Convert.ToInt32(txtBox_S0.Text), Convert.ToInt32(txtBox_D0.Text), txtBox_R0.Text,
+                    txtBox_C1.Text, txtBox_J1.Text, Convert.ToInt32(txtBox_S1.Text), Convert.ToInt32(txtBox_D1.Text), txtBox_R1.Text, txtBox_C2.Text, txtBox_J2.Text, Convert.ToInt32(txtBox_S2.Text), Convert.ToInt32(txtBox_D2.Text), txtBox_R2.Text,
+                    txtBox_C3.Text, txtBox_J3.Text, Convert.ToInt32(txtBox_S3.Text), Convert.ToInt32(txtBox_D3.Text), txtBox_R3.Text);
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.StackTrace);
+            }
+            
         }
     }
 }
