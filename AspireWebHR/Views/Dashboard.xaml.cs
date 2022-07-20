@@ -33,8 +33,28 @@ namespace AspireWebHR.Views
         private void btn_addCandidate_Click(object sender, RoutedEventArgs e)
         {
             CandidateViews.AddCandidateView candidateView = new CandidateViews.AddCandidateView();
-            this.Hide();
             candidateView.Show();
+            this.Show();
+        }
+
+        private void btn_manageRecruiter_Click(object sender, RoutedEventArgs e)
+        {
+            RecruiterViews.ManageRecruiterView manageRecruiter = new RecruiterViews.ManageRecruiterView();
+            manageRecruiter.Show();
+            this.Show();
+        }
+
+        private void btn_ManageCandidates_Click(object sender, RoutedEventArgs e)
+        {
+            CandidateViews.ManageCandidateView manageCandidates = new CandidateViews.ManageCandidateView();
+            manageCandidates.Show();
+            this.Show();
+        }
+
+        private void btn_LeaveApplication_Click(object sender, RoutedEventArgs e)
+        {
+            RecruiterViews.LeaveApplication leaveApplication = new RecruiterViews.LeaveApplication();
+            leaveApplication.Show();
             this.Show();
         }
     }

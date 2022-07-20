@@ -90,7 +90,9 @@
                         FontFamily="Bahnschrift Bold SemiCondensed"
                         FontSize="20"
                         Foreground="Gray"
-                        HorizontalAlignment="Center"/>
+                        HorizontalAlignment="Center"
+                        BorderBrush="Black"
+                        BorderThickness="0.3"/>
 
                     <!--Action Buttons For Candidate Management -->
 
@@ -104,17 +106,21 @@
                         Background="LightSteelBlue"
                         Margin="0, 10, 0, 0"
                         BorderThickness="0.3"
+                        FontSize="15"
                         Click="btn_addCandidate_Click"></Button>
 
                     <Button
-                        Content="Manage Candidate Info"
+                        x:Name="btn_ManageCandidates"
+                        Content="Manage Candidates"
                         Foreground="Black"
                         FontFamily="Bahnschrift SemiBold SemiCondensed"
                         Height="35"
                         Width="250"
                         Background="LightSteelBlue"
                         Margin="0, 10, 0, 0"
-                        BorderThickness="0.3"></Button>
+                        BorderThickness="0.3"
+                        FontSize="15"
+                        Click="btn_ManageCandidates_Click"></Button>
 
                     <Button
                         Content="View Current Openings"
@@ -124,13 +130,14 @@
                         Width="250"
                         Background="LightSteelBlue"
                         Margin="0, 10, 0, 0"
+                        FontSize="15"
                         BorderThickness="0.3"></Button>
 
 
                     <!--NEW LABEL AND BUTTON GROUP-->
 
                     <Label
-                        Content="Profile Management"
+                        Content="Leave Application"
                         FontFamily="Bahnschrift Bold SemiCondensed"
                         FontSize="20"
                         Foreground="Gray"
@@ -141,25 +148,17 @@
 
                     <!--Action Buttons For Candidate Management -->
                     <Button
-                        Content="Manage Own Profile"
+                        x:Name="btn_LeaveApplication"                        
+                        Content="Apply For Leave"
                         Foreground="Black"
                         FontFamily="Bahnschrift SemiBold SemiCondensed"
                         Height="35"
                         Width="250"
                         Background="LightSteelBlue"
                         Margin="0, 10, 0, 0"
-                        BorderThickness="0.3"></Button>
-
-                    <Button
-                        Content="View Personal Stats"
-                        Foreground="Black"
-                        FontFamily="Bahnschrift SemiBold SemiCondensed"
-                        Height="35"
-                        Width="250"
-                        Background="LightSteelBlue"
-                        Margin="0, 10, 0, 0"
-                        BorderThickness="0.3"></Button>
-
+                        FontSize="15"
+                        BorderThickness="0.3"
+                        Click="btn_LeaveApplication_Click"/>
 
 
 
@@ -171,7 +170,9 @@
                         FontSize="20"
                         Foreground="Gray"
                         HorizontalAlignment="Center"
-                        Margin="0, 20, 0, 0"/>
+                        Margin="0, 20, 0, 0"
+                        BorderBrush="Black"
+                        BorderThickness="0.3"/>
 
                     <!--Action Buttons For Candidate Management -->
                     <Button
@@ -186,27 +187,33 @@
                         FontSize="15"
                         BorderThickness="0.3"
                         Click="btn_addRecruiter_Click"></Button>
-                    
-                    
-                    <Button
-                        Content="Manage Recruiters"
-                        Foreground="Black"
-                        FontFamily="Bahnschrift SemiBold SemiCondensed"
-                        Height="35"
-                        Width="250"
-                        Background="LightSteelBlue"
-                        Margin="0, 10, 0, 0"
-                        BorderThickness="0.3"></Button>
+
 
                     <Button
-                        Content="View Stats"
+                        Content="Manage Recruiters"
+                        x:Name="btn_manageRecruiter"
                         Foreground="Black"
                         FontFamily="Bahnschrift SemiBold SemiCondensed"
                         Height="35"
                         Width="250"
                         Background="LightSteelBlue"
                         Margin="0, 10, 0, 0"
-                        BorderThickness="0.3"></Button>
+                        BorderThickness="0.3"
+                        FontSize="15"
+                        Click="btn_manageRecruiter_Click"></Button>
+
+                    <Button
+                        Content="Payroll Disbursement"
+                        x:Name="btn_payrollDisbursement"
+                        Foreground="Black"
+                        FontFamily="Bahnschrift SemiBold SemiCondensed"
+                        Height="35"
+                        Width="250"
+                        Background="LightSteelBlue"
+                        Margin="0, 10, 0, 0"
+                        BorderThickness="0.3"
+                        FontSize="15"
+                        Click="btn_manageRecruiter_Click"></Button>
 
                 </StackPanel>
             </Viewbox>
