@@ -64,5 +64,11 @@ namespace AspireWebHR.Views
             leaveManagement.Show();
             this.Show();
         }
+
+        private void btn_CurrentOpenings_Click(object sender, RoutedEventArgs e)
+        {
+            MiscViews.ViewOpenings viewOpenings = new MiscViews.ViewOpenings();
+            viewOpenings.Show();
+        }
     }
 }

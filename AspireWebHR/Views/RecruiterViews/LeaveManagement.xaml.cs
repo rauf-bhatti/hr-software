@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using AspireWebHR.Controllers;
 
 namespace AspireWebHR.Views.RecruiterViews
 {
@@ -17,9 +18,18 @@ namespace AspireWebHR.Views.RecruiterViews
     /// </summary>
     public partial class LeaveManagement : Window
     {
+        private LeaveController leaveController = new LeaveController();
+
+        private void BindDataToGrid()
+        {
+            this.listView_Main.ItemsSource = leaveController.GetAllLeaves();
+        }
+
+
         public LeaveManagement()
         {
             InitializeComponent();
+            BindDataToGrid();
         }
     }
 }

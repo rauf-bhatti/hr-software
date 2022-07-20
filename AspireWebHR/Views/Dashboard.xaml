@@ -123,6 +123,7 @@
                         Click="btn_ManageCandidates_Click"></Button>
 
                     <Button
+                        x:Name="btn_CurrentOpenings"
                         Content="View Current Openings"
                         Foreground="Black"
                         FontFamily="Bahnschrift SemiBold SemiCondensed"
@@ -131,7 +132,8 @@
                         Background="LightSteelBlue"
                         Margin="0, 10, 0, 0"
                         FontSize="15"
-                        BorderThickness="0.3"></Button>
+                        BorderThickness="0.3"
+                        Click="btn_CurrentOpenings_Click"></Button>
 
 
                     <!--NEW LABEL AND BUTTON GROUP-->

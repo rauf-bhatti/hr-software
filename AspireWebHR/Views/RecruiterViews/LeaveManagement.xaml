@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:AspireWebHR.Views.RecruiterViews"
         mc:Ignorable="d"
         Title="ManageRecruiterView" Height="800" Width="1000">
-    <Grid>
+    <Grid
+        Background="GhostWhite">
         <Grid.RowDefinitions>
             <RowDefinition Height="10"/>
             <RowDefinition Height="*"/>
@@ -91,25 +92,22 @@
             <ListView
                 x:Name="listView_Main"
                 FontFamily="Bahnschrift SemiBold SemiCondensed" 
-                Background="GhostWhite">
+                Background="White">
 
                 <ListView.View>
                     <GridView 
                         AllowsColumnReorder="False"
                         ColumnHeaderTemplate="{StaticResource GridHeaderTemplate}">
 
-                        <GridViewColumn Header = "Leave ID" Width="150" CellTemplate="{StaticResource CellTemplateEmployeeID}"/>
+                        <GridViewColumn Header = "Leave ID" Width="150" CellTemplate="{StaticResource LeaveCellTemplateID}"/>
                         <GridViewColumn Header = "Recruiter ID" Width="250" CellTemplate="{StaticResource CellTemplateEmployeeID}"/>
-                        <GridViewColumn Header = "First Name" Width="250" CellTemplate="{StaticResource CellTemplateFirstName}"/>
-                        <GridViewColumn Header = "From Date" Width="250" CellTemplate="{StaticResource CellTemplateTitle}"/>
-                        <GridViewColumn Header = "To Date" Width="250" CellTemplate="{StaticResource CellTemplateFirstName}"/>
-                        <GridViewColumn Header = "Reason" Width="250" CellTemplate="{StaticResource CellTemplateFirstName}"/>
-                        <GridViewColumn Header = "Category" Width="250" CellTemplate="{StaticResource CellTemplateFirstName}"/>
-                        <GridViewColumn Header = "Approved Status" Width="250" CellTemplate="{StaticResource CellTemplateFirstName}"/>
-
+                        <GridViewColumn Header = "From Date" Width="250" CellTemplate="{StaticResource LeaveCellTemplateFromDate}"/>
+                        <GridViewColumn Header = "To Date" Width="250" CellTemplate="{StaticResource LeaveCellTemplateToDate}"/>
+                        <GridViewColumn Header = "Reason" Width="250" CellTemplate="{StaticResource LeaveCellTemplateReason}"/>
+                        <GridViewColumn Header = "Category" Width="250" CellTemplate="{StaticResource LeaveCellTemplateCategory}"/>
+                        <GridViewColumn Header = "Approved Status" Width="250" CellTemplate="{StaticResource LeaveCellTemplateApprovedStatus}"/>
                     </GridView>
                 </ListView.View>
-
             </ListView>
         </ScrollViewer>
 

@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using AspireWebHR.Controllers;
 
 namespace AspireWebHR.Views.RecruiterViews
 {
@@ -17,6 +18,7 @@ namespace AspireWebHR.Views.RecruiterViews
     /// </summary>
     public partial class LeaveApplication : Window
     {
+        private LeaveController leaveController = new LeaveController();
         public LeaveApplication()
         {
             InitializeComponent();
@@ -24,7 +26,16 @@ namespace AspireWebHR.Views.RecruiterViews
 
         private void btn_SubmitLeave_Click(object sender, RoutedEventArgs e)
         {
+            ComboBoxItem reason = (ComboBoxItem)cbBox_Reason.SelectedItem;
 
+            if (leaveController.AddLeave((DateTime)datePicker_FromLeaveDate.SelectedDate, (DateTime)datePicker_ToLeaveDate.SelectedDate, txtBox_Reason.Text, reason.Content.ToString()) == 1)
+            {
+                MessageBox.Show($"You have successfully applied for leave from: {(DateTime)datePicker_FromLeaveDate.SelectedDate} to: {(DateTime)datePicker_ToLeaveDate.SelectedDate}");
+            }
+            else
+            {
+                MessageBox.Show($"Error applying for leave!");
+            }
         }
     }
 }
