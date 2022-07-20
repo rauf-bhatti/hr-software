@@ -13,18 +13,13 @@ using System.Windows.Shapes;
 namespace AspireWebHR.Views.RecruiterViews
 {
     /// <summary>
-    /// Interaction logic for LeaveApplication.xaml
+    /// Interaction logic for LeaveManagement.xaml
     /// </summary>
-    public partial class LeaveApplication : Window
+    public partial class LeaveManagement : Window
     {
-        public LeaveApplication()
+        public LeaveManagement()
         {
             InitializeComponent();
-        }
-
-        private void btn_SubmitLeave_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

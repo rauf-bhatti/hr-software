@@ -67,8 +67,132 @@
                 </StackPanel>
             </Viewbox>
         </Grid>
-        
-        
+
+        <Viewbox
+            Grid.Row="2"
+            Grid.Column="1"
+            Grid.ColumnSpan="9"
+            Margin="0, 2.5, 0, 0">
+
+            <Border
+                BorderBrush="Black"
+                BorderThickness="0.3">
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="From Date: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <Viewbox
+                            Height="10"
+                            Width="55">
+                            <DatePicker 
+                                x:Name="datePicker_FromLeaveDate"
+                                BorderThickness="0.3"
+                                BorderBrush="Black"
+                                Margin="0, 0, 5, 0"
+                                FontSize="10"
+                                FontFamily="Bahnschrift"/>
+                        </Viewbox>
+                    </StackPanel>
+
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="To Date: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <Viewbox
+                            Height="10"
+                            Width="55">
+                            <DatePicker 
+                                x:Name="datePicker_ToLeaveDate"
+                                BorderThickness="0.3"
+                                BorderBrush="Black"
+                                Margin="0, 0, 5, 0"
+                                FontSize="10"
+                                FontFamily="Bahnschrift"/>
+                        </Viewbox>
+                    </StackPanel>
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Reason For Applying: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <ComboBox
+                            x:Name="cbBox_Reason"
+                            Height="10"
+                            Width="55"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"                            
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 0">
+
+                            <ComboBoxItem Content="Medical"></ComboBoxItem>
+                            <ComboBoxItem Content="Non-Medical"></ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Reason: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            x:Name="txtBox_MiddleName"
+                            Height="10"
+                            Width="55"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"                            
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Viewbox>
+
+        <Viewbox
+            Grid.Row="3"
+            Grid.Column="5"
+            Grid.RowSpan="1"
+            Margin="0, 2.5, 0, 0">
+
+            <Border 
+                BorderBrush="Black"
+                BorderThickness="0.3"
+                Margin="0, 10, 0, 0">
+                <StackPanel
+                    Orientation="Vertical"
+                    HorizontalAlignment="Center">
+
+
+                    <Button
+                        x:Name="btn_SubmitLeave"
+                        BorderBrush="Black"
+                        BorderThickness="0"
+                        Height="20"
+                        Width="60"
+                        Content="Submit"
+                        FontSize="8"
+                        FontFamily="Bahnschrift Bold SemiCondensed"
+                        Click="btn_SubmitLeave_Click"/>
+                </StackPanel>
+            </Border>
+        </Viewbox>
         
         
     </Grid>

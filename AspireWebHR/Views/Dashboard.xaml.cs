@@ -57,5 +57,12 @@ namespace AspireWebHR.Views
             leaveApplication.Show();
             this.Show();
         }
+
+        private void btn_LeaveApplicationManagement_Click(object sender, RoutedEventArgs e)
+        {
+            RecruiterViews.LeaveManagement leaveManagement = new RecruiterViews.LeaveManagement();
+            leaveManagement.Show();
+            this.Show();
+        }
     }
 }
