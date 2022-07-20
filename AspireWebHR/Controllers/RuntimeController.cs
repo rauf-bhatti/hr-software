@@ -9,6 +9,9 @@ namespace AspireWebHR.Controllers
     {
         private static List<CandidateModel> candidates = new List<CandidateModel>();
         private static List<RecruiterModel> recruiters = new List<RecruiterModel>();
+        public static string RecruiterID = "1";
+        public static string RecruiterFullName = "Rauf";
+        public static int RecruiterLevel = 1;
 
         private void SetCandidatesList(List<CandidateModel> candidatesList)
         {
@@ -121,8 +124,6 @@ namespace AspireWebHR.Controllers
 
             return toReturn;
         }
-
-
 
     }
 }

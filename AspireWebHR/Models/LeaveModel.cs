@@ -1,0 +1,45 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace AspireWebHR.Models
+{
+    class LeaveModel
+    {
+        public int LeaveID { get; set; }
+        public string EmployeeID { get; set; }
+        public DateTime FromDate { get; set; }
+        public DateTime ToDate { get; set; }
+        public string Reason { get; set; }
+        public string Category { get; set; }
+        public bool ApprovedStatus { get; set; }
+
+
+        public LeaveModel(string EmployeeID, DateTime FromDate, DateTime ToDate, string Reason, string Category, bool ApprovedStatus)
+        {
+            this.EmployeeID = EmployeeID;
+            this.FromDate = FromDate;
+            this.ToDate = ToDate;
+            this.Reason = Reason;
+            this.Category = Category;
+            this.ApprovedStatus = ApprovedStatus;
+        }
+
+        public LeaveModel(int LeaveID, string EmployeeID, DateTime FromDate, DateTime ToDate, string Reason, string Category, bool ApprovedStatus)
+        {
+            this.LeaveID = LeaveID;
+            this.EmployeeID = EmployeeID;
+            this.FromDate = FromDate;
+            this.ToDate = ToDate;
+            this.Reason = Reason;
+            this.Category = Category;
+            this.ApprovedStatus = ApprovedStatus;
+        }
+
+        public string QueryizeInsert()
+        {
+            return $"INSERT INTO Leaves (EMPLOYEE_ID, FromDate, ToDate, Reason, Category, Approved_Status)" +
+                $" VALUES ('{this.EmployeeID}', '{this.FromDate}', '{this.ToDate}', '{this.Reason}', '{this.Category}', '{this.ApprovedStatus}');";
+        }
+    }
+}

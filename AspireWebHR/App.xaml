@@ -117,7 +117,7 @@
 
 
 
-        <!--Candidate Grid Cell Template End -->
+        <!--Candidate Grid Cell Template Start -->
         <DataTemplate x:Key="CandidateCellTemplateEntryDate">
             <DockPanel>
                 <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
@@ -137,6 +137,110 @@
                 </TextBlock>
             </DockPanel>
         </DataTemplate>
+
+        <!--Candidate Grid Cell Template End -->
+
+        <!--Opening Grid Cell Template Start -->
+        <DataTemplate x:Key="JobCellTemplateJobID">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="JobID"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="JobCellTemplateOpeningTitle">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="OpeningTitle"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="JobCellTemplateOpeningDate">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="OpeningDate"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <!--Opening Grid Cell Template End -->
+
+
+
+
+        <!--Opening Grid Cell Template Start -->
+        <DataTemplate x:Key="LeaveCellTemplateID">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="LeaveID"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="LeaveCellTemplateFromDate">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="FromDate"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="LeaveCellTemplateToDate">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="ToDate"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+
+        <DataTemplate x:Key="LeaveCellTemplateReason">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="Reason"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="LeaveCellTemplateCategory">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="Category"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="LeaveCellTemplateApprovedStatus">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="ApprovedStatus"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+
+        <!--Candidate Grid Cell Template End -->
+
 
     </Application.Resources>
 </Application> 
