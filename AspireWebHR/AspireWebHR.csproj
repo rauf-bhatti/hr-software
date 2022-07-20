@@ -48,4 +48,9 @@
     <PackageReference Include="Npgsql" Version="6.0.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\LeaveViews\" />
+    <Folder Include="Views\PayrollViews\" />
+  </ItemGroup>
+
 </Project>

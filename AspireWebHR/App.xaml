@@ -4,6 +4,139 @@
              xmlns:local="clr-namespace:AspireWebHR"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        
+        <!--Recruiter Header Grid Template-->
+        
+        <DataTemplate x:Key="GridHeaderTemplate">
+            <DockPanel>
+                <TextBlock FontSize="18" Foreground="Black" FontWeight="Bold" FontFamily="Bahnschrift SemiBold SemiCondensed" Height="30">
+                    <TextBlock.Text>
+                        <Binding />
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+
+        <!--Recruiter Grid Cell Template Start-->
+
+        <DataTemplate x:Key="CellTemplateEmployeeID">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="EmployeeID"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="CellTemplateTitle">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50" Width="150">
+                    <TextBlock.Text>
+                        <Binding Path="Title"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="CellTemplateFirstName">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="FirstName"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="CellTemplateMiddleName">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="MiddleName"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="CellTemplateLastName">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="LastName"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="CellTemplateAge">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="Age"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="CellTemplateEmailID">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="EmailID"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="CellTemplateMobileNumber">
+            <DockPanel>
+                <TextBlock Foreground="Black"  FontFamily="Bahnschrift"  FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="MobileNumber"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="CellTemplateGender">
+            <DockPanel>
+                <TextBlock Foreground="Black"  FontFamily="Bahnschrift"  FontSize="16" Height="50" >
+                    <TextBlock.Text>
+                        <Binding Path="Gender"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <!--Recruiter Grid Cell Template End -->
+
+
+
+
+
+
+        <!--Candidate Grid Cell Template End -->
+        <DataTemplate x:Key="CandidateCellTemplateEntryDate">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="EntryDate"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="CandidateCellTemplateCandidateID">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="CandidateID"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
     </Application.Resources>
 </Application> 

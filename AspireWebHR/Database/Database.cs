@@ -30,7 +30,6 @@ namespace AspireWebHR.Database
                 ResetConnection();
 
                 NpgsqlCommand _cmd = new NpgsqlCommand(query, connection);
-
                 resultToReturn = _cmd.ExecuteScalar();
 
                 connection.Close();
@@ -128,5 +127,27 @@ namespace AspireWebHR.Database
                 return e.ErrorCode;
             }
         }
+
+        public int RunInsertionQuery(string query, int x)
+        {
+            dynamic resultToReturn;
+            try
+            {
+                ResetConnection();
+
+                NpgsqlCommand _cmd = new NpgsqlCommand(query, connection);
+
+                resultToReturn = _cmd.ExecuteScalar();
+
+                connection.Close();
+                return resultToReturn;
+            }
+            catch (NpgsqlException e)
+            {
+                connection.Close();
+                return e.ErrorCode;
+            }
+        }
+
     }
 }
