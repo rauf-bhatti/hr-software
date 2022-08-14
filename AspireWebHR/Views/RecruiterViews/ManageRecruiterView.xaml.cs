@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using AspireWebHR.Controllers;
+using AspireWebHR.Models;
 
 namespace AspireWebHR.Views.RecruiterViews
 {
@@ -47,6 +48,14 @@ namespace AspireWebHR.Views.RecruiterViews
             }
 
             BindDataToGrid(txtBox_SearchEmployee.Text);
+        }
+
+        private void listView_Main_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            int selectedIndex = listView_Main.SelectedIndex;
+            EditRecruiter editRecruiter = new EditRecruiter(RuntimeController.GetRecruiterFromIndex(selectedIndex));
+            editRecruiter.ShowDialog();
+            BindDataToGrid();
         }
     }
 }

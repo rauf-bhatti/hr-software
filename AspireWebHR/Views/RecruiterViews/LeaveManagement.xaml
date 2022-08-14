@@ -92,7 +92,8 @@
             <ListView
                 x:Name="listView_Main"
                 FontFamily="Bahnschrift SemiBold SemiCondensed" 
-                Background="White">
+                Background="White"
+                MouseDoubleClick="ListView_Main_MouseDoubleClick">
 
                 <ListView.View>
                     <GridView 

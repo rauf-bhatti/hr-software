@@ -23,6 +23,19 @@ namespace AspireWebHR.Controllers
             }
         }
 
+        public int ModifyLeaveStatus(string query)
+        {
+            try
+            {
+                return this.dbInstance.RunModificationQuery(query);
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.StackTrace);
+                return -1;
+            }
+        }
+
         public List<LeaveModel> GetAllLeaves()
         {
             List<LeaveModel> leaveList = new List<LeaveModel>();

@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using AspireWebHR.Controllers;
 
 namespace AspireWebHR.Views
 {
@@ -20,6 +21,12 @@ namespace AspireWebHR.Views
         public Dashboard()
         {
             InitializeComponent();
+            InitializeName();
+        }
+
+        private void InitializeName()
+        {
+            this.lbl_HeaderName.Content = $"Welcome, {RuntimeController.RecruiterFullName}";
         }
 
         private void btn_addRecruiter_Click(object sender, RoutedEventArgs e)

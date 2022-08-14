@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AspireWebHR.Models
 {
-    class RecruiterModel
+    public class RecruiterModel
     {
         public string EmployeeID { get; set; }
         public string Title { get; set; }
@@ -29,6 +29,8 @@ namespace AspireWebHR.Models
         public string Notes { get; set; }
         public string user_password { get; set; }
         public int user_level { get; set; }
+
+        public RecruiterModel() { }
 
         public RecruiterModel(string EmployeeID, string FirstName, string MiddleName, string LastName, int Age, string MobileNumber, string EmailID, string Nationality,
              string Address, DateTime BirthDate, string Gender, string MaritalStatus, DateTime HireDate, string SupervisorName, string Department, int Salary, int Medical_Leaves,
@@ -91,6 +93,19 @@ namespace AspireWebHR.Models
         {
             string query = $"INSERT INTO Employees_Table (EMPLOYEE_ID, FirstName, MiddleName, LastName, Age, MobileNumber, EmailID, Nationality, Address, Birthdate, Gender, MaritalStatus, Hiredate, SupervisorName, Department, Salary, MedicalLeaves, NonMedicalLeaves, On_Leave, Notes, user_password, user_level)" +
                 $"VALUES ('{this.EmployeeID}', '{this.FirstName}', '{this.MiddleName}', '{this.LastName}', '{this.Age}', '{this.MobileNumber}', '{this.EmailID}', '{this.Nationality}', '{this.Address}', '{this.BirthDate}', '{this.Gender}', '{this.MaritalStatus}', '{this.HireDate}', '{this.SupervisorName}', '{this.Department}', '{this.Salary}', '{this.Medical_Leaves}', '{this.Non_Medical_Leaves}', '{this.On_Leave}', '{this.Notes}', '{this.user_password}', '{this.user_level}')";
+
+            return query;
+        }
+
+        public string QueryizeModify()
+        {
+            string query = $"UPDATE Employees_Table SET FirstName = '{this.FirstName}', MiddleName = '{this.MiddleName}', " +
+                $"LastName = '{this.LastName}', Age = '{this.Age}', MobileNumber = '{this.MobileNumber}'," +
+                $"EmailID = '{this.EmailID}', Nationality = '{this.Nationality}', Address = '{this.Address}', Birthdate = '{this.BirthDate}', " +
+                $"Gender = '{this.Gender}', MaritalStatus = '{this.MaritalStatus}', Hiredate = '{this.HireDate}', SupervisorName = '{this.SupervisorName}', " +
+                $"Department = '{this.Department}', Salary = '{this.Salary}', MedicalLeaves = '{this.Medical_Leaves}', NonMedicalLeaves = '{this.Non_Medical_Leaves}', " +
+                $"On_Leave = '{this.On_Leave}', Notes = '{this.Notes}', user_password = '{this.user_password}', user_level = '{this.user_level}'" +
+                $"WHERE EMPLOYEE_ID = '{this.EmployeeID}'";
 
             return query;
         }

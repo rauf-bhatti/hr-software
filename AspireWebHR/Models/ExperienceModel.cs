@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AspireWebHR.Models
 {
-    class ExperienceModel
+    public class ExperienceModel
     {
         public string CompanyName { get; set; }
         public string JobTitle { get; set; }
@@ -31,6 +31,11 @@ namespace AspireWebHR.Models
         {
             return $"INSERT INTO Job_History (CANDIDATE_ID, CompanyName, JobTitle, Salary, Duration, LeavingReason)" +
                 $" VALUES ('{index}', '{CompanyName}', '{JobTitle}', '{Salary}', '{Duration}', '{LeavingReason}')";
+        }
+
+        public static string QueryizeGet(int candidateKey)
+        {
+            return $"SELECT * FROM Job_History WHERE CANDIDATE_ID = {candidateKey}";
         }
     }
 }

@@ -115,12 +115,10 @@
 
 
 
-
-
         <!--Candidate Grid Cell Template Start -->
         <DataTemplate x:Key="CandidateCellTemplateEntryDate">
             <DockPanel>
-                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                <TextBlock Foreground="DarkBlue" FontFamily="Bahnschrift" FontSize="16" Height="50">
                     <TextBlock.Text>
                         <Binding Path="EntryDate"/>
                     </TextBlock.Text>
@@ -140,32 +138,236 @@
 
         <!--Candidate Grid Cell Template End -->
 
+        
+        
+        
         <!--Opening Grid Cell Template Start -->
-        <DataTemplate x:Key="JobCellTemplateJobID">
+        <DataTemplate x:Key="OpeningDatePosted">
             <DockPanel>
                 <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
                     <TextBlock.Text>
-                        <Binding Path="JobID"/>
+                        <Binding Path="DatePosted"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="OpeningID">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="OpeningID"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="OpeningCompanyName">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="CompanyName"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="OpeningClientName">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="ClientName"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="OpeningJobLocation">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="JobLocation"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="OpeningInterviewLocation">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="InterviewLocation"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="OpeningClientContact">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="ClientContact"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="OpeningVacancy">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="Vacancy"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="OpeningRole">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="Role"/>
                     </TextBlock.Text>
                 </TextBlock>
             </DockPanel>
         </DataTemplate>
 
-        <DataTemplate x:Key="JobCellTemplateOpeningTitle">
+        <DataTemplate x:Key="OpeningSalaryRange">
             <DockPanel>
                 <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
                     <TextBlock.Text>
-                        <Binding Path="OpeningTitle"/>
+                        <Binding Path="SalaryRange"/>
                     </TextBlock.Text>
                 </TextBlock>
             </DockPanel>
         </DataTemplate>
 
-        <DataTemplate x:Key="JobCellTemplateOpeningDate">
+        <DataTemplate x:Key="OpeningExperience">
             <DockPanel>
                 <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
                     <TextBlock.Text>
-                        <Binding Path="OpeningDate"/>
+                        <Binding Path="Experience"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="OpeningWorkingHours">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="WorkingHours"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="OpeningWorkingDays">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="WorkingDays"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="OpeningWeeklyOff">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="WeeklyOff"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="OpeningGender">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="Gender"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="OpeningNationality">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="Nationality"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="OpeningArabicSpeaker">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="ArabicSpeaker"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="OpeningAccomodation">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="Accomodation"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+
+        <DataTemplate x:Key="OpeningTransport">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="Transport"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="OpeningMeals">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="Meals"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="OpeningINOUT">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="Meals"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="OpeningStatus">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="Status"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="OpeningAmountPaid">
+            <DockPanel>
+                <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
+                    <TextBlock.Text>
+                        <Binding Path="AmountPaid"/>
                     </TextBlock.Text>
                 </TextBlock>
             </DockPanel>
@@ -176,7 +378,7 @@
 
 
 
-        <!--Opening Grid Cell Template Start -->
+        <!--Leave Management Grid Cell Template Start -->
         <DataTemplate x:Key="LeaveCellTemplateID">
             <DockPanel>
                 <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
@@ -207,7 +409,6 @@
             </DockPanel>
         </DataTemplate>
 
-
         <DataTemplate x:Key="LeaveCellTemplateReason">
             <DockPanel>
                 <TextBlock Foreground="Black" FontFamily="Bahnschrift" FontSize="16" Height="50">
@@ -237,9 +438,7 @@
                 </TextBlock>
             </DockPanel>
         </DataTemplate>
-
-
-        <!--Candidate Grid Cell Template End -->
+        <!--Leave Management Grid Cell Template End -->
 
 
     </Application.Resources>

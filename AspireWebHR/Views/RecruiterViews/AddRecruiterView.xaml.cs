@@ -35,9 +35,22 @@ namespace AspireWebHR.Views.RecruiterViews
                 ComboBoxItem marital_status = (ComboBoxItem)cbBox_MaritalStatus.SelectedItem;
                 ComboBoxItem department = (ComboBoxItem)cbBox_Department.SelectedItem;
 
-                recruiterController.AddRecruiter(txtBox_EmployeeID.Text, txtBox_FirstName.Text, txtBox_MiddleName.Text, txtBox_LastName.Text, Convert.ToInt32(txtBox_LastName.Text),
+                int returnCode = recruiterController.AddRecruiter(txtBox_EmployeeID.Text, txtBox_Title.Text, txtBox_FirstName.Text, txtBox_MiddleName.Text, txtBox_LastName.Text, Convert.ToInt32(txtBox_Age.Text),
                     txtBox_MobileNumber.Text, txtBox_EmailID.Text, txtBox_Nationality.Text, txtBox_Address.Text, (DateTime)datePicker_Birthdate.SelectedDate, gender.Content.ToString(), marital_status.Content.ToString(), (DateTime)datePicker_HireDate.SelectedDate,
                     txtBox_SupervisorName.Text, department.Content.ToString(), Convert.ToInt32(txtBox_Salary.Text), Convert.ToInt32(txtBox_MedLeaves.Text), Convert.ToInt32(txtBox_NonMedLeaves.Text), txtBox_Notes.Text);
+
+                if (returnCode == 1)
+                {
+                    MessageBox.Show($"Recruiter: {txtBox_FirstName.Text + " " + txtBox_LastName.Text} has successfully been inserted.");
+                }
+                else if (returnCode == -1)
+                {
+                    MessageBox.Show("Please rescheck numeric values!");
+                }
+                else
+                {
+                    MessageBox.Show("Please recheck your form entries!");
+                }
             }
             catch (Exception exception)
             {

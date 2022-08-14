@@ -45,5 +45,13 @@ namespace AspireWebHR.Views.CandidateViews
         {
             BindDataToGrid();
         }
+
+        private void listView_Main_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            int selectedIndex = listView_Main.SelectedIndex;
+            EditCandidate editRecruiter = new EditCandidate(RuntimeController.GetCandidateFromIndex(selectedIndex));
+            editRecruiter.ShowDialog();
+            BindDataToGrid();
+        }
     }
 }

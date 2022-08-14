@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AspireWebHR.Models
 {
-    class LeaveModel
+    public class LeaveModel
     {
         public int LeaveID { get; set; }
         public string EmployeeID { get; set; }
@@ -40,6 +40,18 @@ namespace AspireWebHR.Models
         {
             return $"INSERT INTO Leaves (EMPLOYEE_ID, FromDate, ToDate, Reason, Category, Approved_Status)" +
                 $" VALUES ('{this.EmployeeID}', '{this.FromDate}', '{this.ToDate}', '{this.Reason}', '{this.Category}', '{this.ApprovedStatus}');";
+        }
+
+        public string QueryizeApprove()
+        {
+            this.ApprovedStatus = true;
+            return $"UPDATE Leaves SET Approved_Status = '{this.ApprovedStatus}' WHERE Leave_ID = '{this.LeaveID}'";
+        }
+
+        public string QueryizeDecline()
+        {
+            this.ApprovedStatus = false;
+            return $"DELETE FROM Leaves WHERE Leave_ID = '{this.LeaveID}'";
         }
     }
 }

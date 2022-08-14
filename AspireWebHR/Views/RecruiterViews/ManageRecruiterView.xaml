@@ -102,7 +102,8 @@
             <ListView
                 x:Name="listView_Main"
                 FontFamily="Bahnschrift SemiBold SemiCondensed" 
-                Background="GhostWhite">
+                Background="GhostWhite"
+                MouseDoubleClick="listView_Main_MouseDoubleClick">
 
                 <ListView.View>
                     <GridView 
@@ -115,9 +116,9 @@
                         <GridViewColumn Header = "Middle Name" Width="250" CellTemplate="{StaticResource CellTemplateMiddleName}"/>
                         <GridViewColumn Header = "Last Name" Width="250" CellTemplate="{StaticResource CellTemplateLastName}"/>
                         <GridViewColumn Header = "Gender" Width="150" CellTemplate="{StaticResource CellTemplateGender}"/>
-                        <GridViewColumn Header = "Age" Width="150" CellTemplate="{StaticResource CellTemplateEmployeeID}"/>
-                        <GridViewColumn Header = "Mobile Number" Width="250" CellTemplate="{StaticResource CellTemplateEmployeeID}"/>
-                        <GridViewColumn Header = "Email ID" Width="250" CellTemplate="{StaticResource CellTemplateEmployeeID}" />
+                        <GridViewColumn Header = "Age" Width="150" CellTemplate="{StaticResource CellTemplateAge}"/>
+                        <GridViewColumn Header = "Mobile Number" Width="250" CellTemplate="{StaticResource CellTemplateMobileNumber}"/>
+                        <GridViewColumn Header = "Email ID" Width="250" CellTemplate="{StaticResource CellTemplateEmailID}" />
                     </GridView>
                 </ListView.View>
                 

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AspireWebHR.Validators
 {
-    class OpeningValidator
+    class OpeningValidator : IValidator
     {
     }
 }

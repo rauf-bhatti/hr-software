@@ -31,5 +31,15 @@ namespace AspireWebHR.Views.RecruiterViews
             InitializeComponent();
             BindDataToGrid();
         }
+
+        private void ListView_Main_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            int selectedIndex = this.listView_Main.SelectedIndex;
+            dynamic x = this.listView_Main.SelectedItem;
+            LeaveDialog leaveDialog = new LeaveDialog(x);
+            leaveDialog.ShowDialog();
+
+            BindDataToGrid();
+        }
     }
 }

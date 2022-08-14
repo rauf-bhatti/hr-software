@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Dashboard" Height="800" Width="1400">
     <Grid
-        Background="White">
+        Background="GhostWhite">
         
         <!-- Main Grid -->
         <Grid.RowDefinitions>
@@ -124,7 +124,7 @@
 
                     <Button
                         x:Name="btn_CurrentOpenings"
-                        Content="View Current Openings"
+                        Content="Manage Current Openings"
                         Foreground="Black"
                         FontFamily="Bahnschrift SemiBold SemiCondensed"
                         Height="35"
@@ -231,53 +231,85 @@
             </Viewbox>
         </Grid>
 
-        <Grid
+        <Border
             Grid.Column="4"
             Grid.ColumnSpan="6"
             Grid.Row="1"
             Grid.RowSpan="2"
-            Background="Purple">
+            BorderThickness="1"
+            BorderBrush="Black">
+            
+            <Grid
+                Background="Purple">
 
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-            <Viewbox
-                Grid.Row="0"
-                Grid.Column="1"
-                Grid.ColumnSpan="3"
-                Grid.RowSpan="3"
-                Stretch="Uniform">
+                <Viewbox
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="3"
+                    Grid.RowSpan="3"
+                    Stretch="Uniform">
 
-                <StackPanel
-                    Orientation="Horizontal">
+                    <StackPanel
+                        Orientation="Horizontal">
 
-                    <Image
-                        Source="../assets/profile.png"
-                        Height="100"
-                        Width="150"></Image>
+                        <Image
+                            Source="../assets/profile.png"
+                            Height="100"
+                            Width="150"></Image>
 
 
-                    <Label
-                        Content="Welcome, Abdul Rauf Bhatti"
-                        FontSize="40"
-                        FontFamily="Bahnschrift SemiBold SemiCondensed"
-                        Margin="20, 20, 0, 0"
-                        Foreground="White"></Label>
-                </StackPanel>
-            </Viewbox>
-        </Grid>
-        
+                        <Label
+                            x:Name="lbl_HeaderName"
+                            Content="Welcome, Abdul Rauf Bhatti"
+                            FontSize="40"
+                            FontFamily="Bahnschrift SemiBold SemiCondensed"
+                            Margin="20, 20, 0, 0"
+                            Foreground="White"></Label>
+                    </StackPanel>
+                </Viewbox>
+            </Grid>
+        </Border>
+
+        <ScrollViewer 
+            HorizontalScrollBarVisibility="Auto"
+            Grid.Column="4"
+            Grid.Row="4"
+            Grid.ColumnSpan="6"
+            Grid.RowSpan="3">
+            <ListView
+                x:Name="listView_Main"
+                FontFamily="Bahnschrift SemiBold SemiCondensed" 
+                Background="White"
+                BorderThickness="0.5"
+                BorderBrush="Black">
+
+                <ListView.View>
+                    <GridView 
+                        AllowsColumnReorder="False"
+                        ColumnHeaderTemplate="{StaticResource GridHeaderTemplate}">
+
+                        <GridViewColumn Header = "Notification ID" Width="200" CellTemplate="{StaticResource CandidateCellTemplateEntryDate}"/>
+                        <GridViewColumn Header = "Notification Text" Width="450" CellTemplate="{StaticResource CandidateCellTemplateCandidateID}" />
+                    </GridView>
+                </ListView.View>
+
+            </ListView>
+        </ScrollViewer>
+
     </Grid>
 </Window>

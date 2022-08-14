@@ -105,7 +105,8 @@
                 FontFamily="Bahnschrift SemiBold SemiCondensed" 
                 Background="White"
                 BorderThickness="0.3"
-                BorderBrush="Black">
+                BorderBrush="Black"
+                MouseDoubleClick="listView_Main_MouseDoubleClick">
 
                 <ListView.View>
                     <GridView 

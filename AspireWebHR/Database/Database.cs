@@ -65,7 +65,6 @@ namespace AspireWebHR.Database
 
         }
 
-
         public dynamic RunDeletionQuery(string query)
         {
             dynamic resultToReturn;

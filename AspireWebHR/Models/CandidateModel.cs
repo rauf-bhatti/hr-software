@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AspireWebHR.Models
 {
-    class CandidateModel
+    public class CandidateModel
     {
         public int CandidateID { get; set; }
         public int RecruiterID { get; set; }
@@ -71,7 +71,14 @@ namespace AspireWebHR.Models
                 $" VALUES ('1', '{this.EntryDate}', '{this.FirstName}', '{this.MiddleName}', '{this.LastName}', '{this.Age}', '{this.MobileNumber}', '{this.EmailID}', '{this.MaritalStatus}', '{this.Nationality}', '{this.Address}', '{this.Birthdate}', '{this.Gender}', '{this.ReferenceName}') RETURNING CANDIDATE_ID;";
         }
 
-        public int GetExperienceLength() { return this.CandidateExperience.Count; }
+        public int GetExperienceLength()
+        { 
+            if (this.CandidateExperience == null)
+            {
+                return 0;
+            }
+            return this.CandidateExperience.Count; 
+        }
 
 
     }

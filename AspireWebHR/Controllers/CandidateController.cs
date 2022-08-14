@@ -43,5 +43,25 @@ namespace AspireWebHR.Controllers
                 return false;
             }
         }
+
+        public List<ExperienceModel> GetCandidateJobHistory(int candidateKey)
+        {
+            try
+            {
+                List<ExperienceModel> toReturn = new List<ExperienceModel>();
+                dynamic dataReader = dbInstance.RunReceiveQuery(ExperienceModel.QueryizeGet(candidateKey), 1);
+
+                while (dataReader.Read())
+                {
+                    toReturn.Add(new ExperienceModel(dataReader["CompanyName"], dataReader["JobTitle"], dataReader["Salary"], dataReader["Duration"], dataReader["LeavingReason"]));
+                }
+                return toReturn;
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.StackTrace);
+                return null;
+            }
+        }
     }
 }
