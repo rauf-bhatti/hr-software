@@ -11,11 +11,11 @@ namespace AspireWebHR.Controllers
         public static int interAmountPaid = -1;
 
         public int AddJobOpening(DateTime DatePosted, string CompanyName, string ClientName, string JobLocation, string InterviewLocation, string RecruiterID, string ClientContact,
-            int Vacancy, string Role, int SalaryRange, string Experience, int WorkingHours, int WorkingDays, int WeeklyOff, string Gender, string Nationality, bool ArabicSpeaker, bool Accomodation,
-            bool Transport, bool Meals, string INOUT, string Status, int AmountPaid)
+            int Vacancy, string Role, int SalaryRange, string Experience, int WorkingHours, int WorkingDays, int WeeklyOff, string Gender, string Nationality, string Language, bool Accomodation,
+            bool Transport, bool Meals, string INOUT, string Status, int AmountPaid, string Remarks)
         {
             JobOpeningModel openingInstance = new JobOpeningModel(DatePosted, CompanyName, ClientName, JobLocation, InterviewLocation, RecruiterID, ClientContact, Vacancy, Role, SalaryRange, Experience, WorkingHours,
-                WorkingDays, WeeklyOff, Gender, Nationality, ArabicSpeaker, Accomodation, Transport, Meals, INOUT, Status, AmountPaid);
+                WorkingDays, WeeklyOff, Gender, Nationality, Language, Accomodation, Transport, Meals, INOUT, Status, AmountPaid, Remarks);
 
             try
             {
@@ -30,11 +30,11 @@ namespace AspireWebHR.Controllers
         }
 
         public int ModifyJobOpening(int openingID, DateTime DatePosted, string CompanyName, string ClientName, string JobLocation, string InterviewLocation, string RecruiterID, string ClientContact,
-            int Vacancy, string Role, int SalaryRange, string Experience, int WorkingHours, int WorkingDays, int WeeklyOff, string Gender, string Nationality, bool ArabicSpeaker, bool Accomodation,
-            bool Transport, bool Meals, string INOUT, string Status, int AmountPaid)
+            int Vacancy, string Role, int SalaryRange, string Experience, int WorkingHours, int WorkingDays, int WeeklyOff, string Gender, string Nationality, string Language, bool Accomodation,
+            bool Transport, bool Meals, string INOUT, string Status, int AmountPaid, string Remarks)
         {
             JobOpeningModel openingInstance = new JobOpeningModel(DatePosted, openingID, CompanyName, ClientName, JobLocation, InterviewLocation, RecruiterID, ClientContact, Vacancy, Role, SalaryRange, Experience, WorkingHours,
-            WorkingDays, WeeklyOff, Gender, Nationality, ArabicSpeaker, Accomodation, Transport, Meals, INOUT, Status, AmountPaid);
+            WorkingDays, WeeklyOff, Gender, Nationality, Language, Accomodation, Transport, Meals, INOUT, Status, AmountPaid, Remarks);
 
 
             try
@@ -53,6 +53,19 @@ namespace AspireWebHR.Controllers
             try
             {
                 return dbInstance.RunModificationQuery(query);
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.StackTrace);
+                return -1;
+            }
+        }
+
+        public int DeleteOpening(string query)
+        {
+            try
+            {
+                return dbInstance.RunDeletionQuery(query);
             }
             catch (Exception exception)
             {

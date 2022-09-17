@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AspireWebHR.Views.RecruiterViews"
         mc:Ignorable="d"
-        Title="LeaveApplication" Height="600" Width="1000">
+        Title="Apply for Leave" Height="600" Width="1000">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="10"/>
@@ -42,7 +42,7 @@
             Grid.RowSpan="2"
             Grid.Column="0"
             Grid.ColumnSpan="11"
-            Background="Purple">
+            Background="#ccbbb1">
 
             <Viewbox
                 Grid.Row="0"
@@ -62,7 +62,7 @@
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         FontSize="25"
-                        FontFamily="Bahnschrift Bold SemiCondensed"
+                        FontFamily="Times New Roman Bold"
                         Foreground="White"/>
                 </StackPanel>
             </Viewbox>
@@ -70,6 +70,34 @@
 
         <Viewbox
             Grid.Row="2"
+            Grid.Column="3"
+            Grid.ColumnSpan="5">
+
+            <Border
+                BorderBrush="Black"
+                BorderThickness="1"
+                Margin="0, 10, 0, 0">
+                <StackPanel
+                    Background="White"
+                    Orientation="Horizontal">
+
+                    <Label
+                        x:Name="lbl_Taken"
+                        Content="Leaves Taken: "
+                        FontFamily="Times New Roman Bold"
+                        Margin="0, 0, 20, 0"/>
+
+                    <Label
+                        x:Name="lbl_Pending"
+                        Content="Leaves Pending: "
+                        FontFamily="Times New Roman Bold"/>
+
+                </StackPanel>
+            </Border>
+        </Viewbox>
+
+        <Viewbox
+            Grid.Row="4"
             Grid.Column="1"
             Grid.ColumnSpan="9"
             Margin="0, 2.5, 0, 0">
@@ -85,7 +113,7 @@
                         Orientation="Horizontal">
                         <Label
                             Content="From Date: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="6"/>
 
                         <Viewbox
@@ -97,7 +125,7 @@
                                 BorderBrush="Black"
                                 Margin="0, 0, 5, 0"
                                 FontSize="10"
-                                FontFamily="Bahnschrift"/>
+                                FontFamily="Times New Roman"/>
                         </Viewbox>
                     </StackPanel>
 
@@ -106,7 +134,7 @@
                         Orientation="Horizontal">
                         <Label
                             Content="To Date: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="6"/>
 
                         <Viewbox
@@ -118,7 +146,7 @@
                                 BorderBrush="Black"
                                 Margin="0, 0, 5, 0"
                                 FontSize="10"
-                                FontFamily="Bahnschrift"/>
+                                FontFamily="Times New Roman"/>
                         </Viewbox>
                     </StackPanel>
 
@@ -127,7 +155,7 @@
         </Viewbox>
 
         <Viewbox
-            Grid.Row="3"
+            Grid.Row="5"
             Grid.Column="1"
             Grid.ColumnSpan="9"
             Margin="0, 5.5, 0, 0">
@@ -143,14 +171,14 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Reason For Applying: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="6"/>
 
                         <ComboBox
                             x:Name="cbBox_Reason"
                             Height="10"
                             Width="55"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                            
                             BorderThickness="0.3"
                             BorderBrush="Black"
@@ -166,14 +194,14 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Reason: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="6"/>
 
                         <TextBox
                             x:Name="txtBox_Reason"
                             Height="10"
                             Width="55"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                            
                             BorderThickness="0.3"
                             BorderBrush="Black"
@@ -185,7 +213,7 @@
 
 
         <Viewbox
-            Grid.Row="4"
+            Grid.Row="6"
             Grid.Column="5"
             Grid.RowSpan="1"
             Margin="0, 2.5, 0, 0">
@@ -207,12 +235,39 @@
                         Width="60"
                         Content="Submit"
                         FontSize="8"
-                        FontFamily="Bahnschrift Bold SemiCondensed"
+                        FontFamily="Times New Roman Bold"
                         Click="btn_SubmitLeave_Click"/>
                 </StackPanel>
             </Border>
         </Viewbox>
-        
-        
+
+        <ScrollViewer 
+            HorizontalScrollBarVisibility="Auto"
+            Grid.Column="1"
+            Grid.Row="8"
+            Grid.ColumnSpan="9"
+            Grid.RowSpan="4">
+            <ListView
+                x:Name="listView_Main"
+                FontFamily="Times New Roman" 
+                Background="White">
+
+                <ListView.View>
+                    <GridView 
+                        AllowsColumnReorder="False"
+                        ColumnHeaderTemplate="{StaticResource GridHeaderTemplate}">
+
+                        <GridViewColumn Header = "Leave ID" Width="150" CellTemplate="{StaticResource LeaveCellTemplateID}"/>
+                        <GridViewColumn Header = "From Date" Width="250" CellTemplate="{StaticResource LeaveCellTemplateFromDate}"/>
+                        <GridViewColumn Header = "To Date" Width="250" CellTemplate="{StaticResource LeaveCellTemplateToDate}"/>
+                        <GridViewColumn Header = "Reason" Width="250" CellTemplate="{StaticResource LeaveCellTemplateReason}"/>
+                        <GridViewColumn Header = "Category" Width="250" CellTemplate="{StaticResource LeaveCellTemplateCategory}"/>
+                        <GridViewColumn Header = "Approved Status" Width="250" CellTemplate="{StaticResource LeaveCellTemplateApprovedStatus}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </ScrollViewer>
+
+
     </Grid>
 </Window>

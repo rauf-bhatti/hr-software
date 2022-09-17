@@ -27,10 +27,10 @@ namespace AspireWebHR.Models
             this.LeavingReason = LeavingReason;
         }
 
-        public string QueryizeExperience(int index)
+        public string QueryizeExperience(int candidateID)
         {
             return $"INSERT INTO Job_History (CANDIDATE_ID, CompanyName, JobTitle, Salary, Duration, LeavingReason)" +
-                $" VALUES ('{index}', '{CompanyName}', '{JobTitle}', '{Salary}', '{Duration}', '{LeavingReason}')";
+                $" VALUES ('{candidateID}', '{CompanyName}', '{JobTitle}', '{Salary}', '{Duration}', '{LeavingReason}')";
         }
 
         public static string QueryizeGet(int candidateKey)

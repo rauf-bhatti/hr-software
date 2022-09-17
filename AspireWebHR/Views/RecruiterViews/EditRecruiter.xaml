@@ -44,7 +44,7 @@
             Grid.RowSpan="2"
             Grid.Column="0"
             Grid.ColumnSpan="11"
-            Background="Purple">
+            Background="#dbafbc">
 
             <Viewbox
                 Grid.Row="0"
@@ -60,11 +60,11 @@
                         Margin="0, 0, 50, 0"/>
 
                     <Label
-                        Content="Employee Information \ معلومات الموظف"
+                        Content="Edit Employee Information"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         FontSize="25"
-                        FontFamily="Bahnschrift Bold SemiCondensed"
+                        FontFamily="Times New Roman Bold"
                         Foreground="White"/>
                 </StackPanel>
             </Viewbox>
@@ -90,7 +90,7 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Employee ID: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <TextBox
@@ -99,7 +99,7 @@
                             Width="55"
                             BorderThickness="0.3"
                             BorderBrush="Black"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"
                             Margin="0, 0, 5, 0"/>
                     </StackPanel>
@@ -109,7 +109,7 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Title: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <TextBox
@@ -117,7 +117,7 @@
                             Height="10"
                             Width="55"
                             BorderThickness="0.3"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"
                             BorderBrush="Black"
                             Margin="0, 0, 5, 0"/>
@@ -127,14 +127,14 @@
                         Orientation="Horizontal">
                         <Label
                             Content="First Name: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <TextBox
                             x:Name="txtBox_FirstName"
                             Height="10"
                             Width="55"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                            
                             BorderThickness="0.3"
                             BorderBrush="Black"
@@ -145,14 +145,14 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Middle Name: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <TextBox
                             x:Name="txtBox_MiddleName"
                             Height="10"
                             Width="55"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                            
                             BorderThickness="0.3"
                             BorderBrush="Black"
@@ -182,14 +182,14 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Last Name: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <TextBox
                             x:Name="txtBox_LastName"
                             Height="10"
                             Width="55"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                            
                             BorderThickness="0.3"
                             BorderBrush="Black"
@@ -201,14 +201,14 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Age: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <TextBox
                             x:Name="txtBox_Age"
                             Height="10"
                             Width="55"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"
                             BorderThickness="0.3"
                             BorderBrush="Black"
@@ -219,14 +219,14 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Mobile Number: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <TextBox
                             x:Name="txtBox_MobileNumber"
                             Height="10"
                             Width="55"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"
                             BorderThickness="0.3"
                             BorderBrush="Black"
@@ -237,14 +237,14 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Email ID: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <TextBox
                             x:Name="txtBox_EmailID"
                             Height="10"
                             Width="55"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                            
                             BorderThickness="0.3"
                             BorderBrush="Black"
@@ -274,14 +274,14 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Nationality: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <TextBox
                             x:Name="txtBox_Nationality"
                             Height="10"
                             Width="55"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                                            
                             BorderThickness="0.3"
                             BorderBrush="Black"
@@ -293,14 +293,14 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Address: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <TextBox
                             x:Name="txtBox_Address"
                             Height="10"
                             Width="55"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                
                             BorderThickness="0.3"
                             BorderBrush="Black"
@@ -311,7 +311,7 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Birthdate: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
                         <Viewbox
                             Height="10"
@@ -322,7 +322,7 @@
                                 BorderBrush="Black"
                                 Margin="0, 0, 5, 0"
                                 FontSize="10"
-                                FontFamily="Bahnschrift"/>
+                                FontFamily="Times New Roman"/>
                         </Viewbox>
                     </StackPanel>
 
@@ -330,7 +330,7 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Gender: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <ComboBox
@@ -339,7 +339,7 @@
                             Width="55"
                             BorderThickness="0.2"
                             BorderBrush="Black"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"
                             Margin="0, 0, 10, 0">
                             <ComboBoxItem Name="Male" Content="Male"></ComboBoxItem>
@@ -371,7 +371,7 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Marital Status: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <ComboBox
@@ -380,7 +380,7 @@
                             Width="55"
                             BorderThickness="0.3"
                             BorderBrush="Black"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                            
                             Margin="0, 0, 5, 0">
 
@@ -395,7 +395,7 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Hire Date: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <Viewbox
@@ -407,7 +407,7 @@
                                 BorderBrush="Black"
                                 Margin="0, 0, 5, 0"
                                 FontSize="10"
-                                FontFamily="Bahnschrift"/>
+                                FontFamily="Times New Roman"/>
                         </Viewbox>
                     </StackPanel>
 
@@ -415,7 +415,7 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Supervisor Name: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <TextBox
@@ -424,7 +424,7 @@
                             Width="55"
                             BorderThickness="0.3"
                             BorderBrush="Black"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                
                             Margin="0, 0, 5, 0"/>
                     </StackPanel>
@@ -433,7 +433,7 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Department: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <ComboBox
@@ -442,10 +442,9 @@
                             Width="55"
                             BorderThickness="0.3"
                             BorderBrush="Black"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                
                             Margin="0, 0, 10, 0">
-                            <ComboBoxItem Name="IT" Content="IT"/>
                         </ComboBox>
                     </StackPanel>
 
@@ -470,7 +469,7 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Employee Salary: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <TextBox
@@ -479,7 +478,7 @@
                             Width="55"
                             BorderThickness="0.3"
                             BorderBrush="Black"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                            
                             Margin="0, 0, 5, 0"/>
                     </StackPanel>
@@ -489,7 +488,7 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Medical Leaves Allowed: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <Viewbox
@@ -503,15 +502,15 @@
                                 BorderBrush="Black"
                                 Margin="0, 0, 5, 0"
                                 FontSize="5"
-                                FontFamily="Bahnschrift"/>
+                                FontFamily="Times New Roman"/>
                         </Viewbox>
                     </StackPanel>
 
                     <StackPanel
                         Orientation="Horizontal">
                         <Label
-                            Content="Non Medical Leaves Allowed: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            Content="Annual Leaves Allowed: "
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <TextBox
@@ -520,7 +519,7 @@
                             Width="55"
                             BorderThickness="0.3"
                             BorderBrush="Black"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                
                             Margin="0, 0, 5, 0"/>
                     </StackPanel>
@@ -550,14 +549,14 @@
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         FontSize="5"
-                        FontFamily="Bahnschrift Bold SemiCondensed"
+                        FontFamily="Times New Roman Bold"
                         Foreground="Black"/>
 
                     <TextBox
                         x:Name="txtBox_Notes"
                         Height="50"
                         Width="100"
-                        FontFamily="Bahnschrift"
+                        FontFamily="Times New Roman"
                         FontSize="5"
                         BorderThickness="0.3">
                     </TextBox>
@@ -566,8 +565,38 @@
             </Border>
         </Viewbox>
 
+
         <Viewbox
             Grid.Row="10"
+            Grid.Column="1"
+            Grid.RowSpan="1"
+            Grid.ColumnSpan="10"
+            Margin="0, 2.5, 0, 0">
+
+            <Border
+                Margin="0, 10, 0, 0">
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+
+                    <Button
+                        x:Name="Btn_ResetPassword"
+                        BorderBrush="Black"
+                        BorderThickness="0.5"
+                        Height="45"
+                        Width="120"
+                        Content="Reset Password"
+                        Margin="0, 0, 0, 0"
+                        FontSize="15"
+                        FontFamily="Times New Roman Bold"
+                        Click="Btn_ResetPassword_Click"/>
+                </StackPanel>
+            </Border>
+        </Viewbox>
+
+
+        <Viewbox
+            Grid.Row="11"
             Grid.Column="1"
             Grid.RowSpan="1"
             Grid.ColumnSpan="10"
@@ -582,6 +611,21 @@
                     HorizontalAlignment="Center">
 
 
+
+                    <Button
+                        x:Name="Btn_ManageAttachments"
+                        BorderBrush="Black"
+                        BorderThickness="0.3"
+                        Height="20"
+                        Width="65"
+                        Content="Manage Attachments"
+                        FontSize="8"
+                        FontFamily="Times New Roman SemiCondensed"
+                        Foreground="White"
+                        Background="Purple"
+                        Margin="0, 0, 10, 0"
+                        Click="Btn_ManageAttachments_Click"/>
+
                     <Button
                         x:Name="btn_ModifyRecruiter"
                         BorderBrush="Black"
@@ -590,23 +634,53 @@
                         Width="60"
                         Content="Modify"
                         FontSize="8"
-                        FontFamily="Bahnschrif SemiCondensed"
+                        FontFamily="Times New Roman SemiCondensed"
                         Click="btn_ModifyRecruiter_Click"
                         Foreground="White"
                         Background="Orange"/>
 
                     <Button
-                        x:Name="btn_DeleteRecruiter"
+                        x:Name="Btn_DeleteRecruiter"
                         BorderBrush="Black"
                         BorderThickness="0.3"
                         Height="20"
                         Width="60"
                         Content="Delete"
                         FontSize="8"
-                        FontFamily="Bahnschrift SemiCondensed"
+                        FontFamily="Times New Roman SemiCondensed"
                         Margin="10, 0, 0, 0"
                         Foreground="White"
-                        Background="Red"/>
+                        Background="Red"
+                        Click="Btn_DeleteRecruiter_Click"/>
+
+                    <Button
+                        x:Name="Btn_PromoteRecruiter"
+                        BorderBrush="Black"
+                        BorderThickness="0.3"
+                        Height="20"
+                        Width="70"
+                        Content="Promote (To Senior)"
+                        FontSize="8"
+                        FontFamily="Times New Roman SemiCondensed"
+                        Margin="10, 0, 0, 0"
+                        Foreground="White"
+                        Background="Navy"
+                        Click="Btn_PromoteRecruiter_Click"/>
+
+                    <Button
+                        x:Name="Btn_ManageIncentives"
+                        BorderBrush="Black"
+                        BorderThickness="0.3"
+                        Height="20"
+                        Width="70"
+                        Content="Manage Incentives"
+                        FontSize="8"
+                        FontFamily="Times New Roman SemiCondensed"
+                        Margin="10, 0, 0, 0"
+                        Foreground="White"
+                        Background="Navy"
+                        Click="Btn_ManageIncentives_Click"/>
+
                 </StackPanel>
             </Border>
         </Viewbox>

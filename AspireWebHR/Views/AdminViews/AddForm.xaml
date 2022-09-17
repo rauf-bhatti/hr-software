@@ -1,0 +1,75 @@
+﻿<Window x:Class="AspireWebHR.Views.AdminViews.AddForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AspireWebHR.Views.AdminViews"
+        mc:Ignorable="d"
+        Title="AddForm" Height="300" Width="300">
+    <Grid
+        Background="GhostWhite">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid
+            Grid.Row="0"
+            Background="Navy">
+
+            <Label
+                Content="Form Addition"
+                Foreground="White"
+                HorizontalAlignment="Center"
+                FontFamily="Times New Roman Bold"
+                FontSize="20"/>
+        </Grid>
+
+        <Viewbox
+            Grid.Row="1">
+            <StackPanel
+                Orientation="Vertical">
+
+                <Label
+                    Margin="0, 10, 0, 0"
+                    FontFamily="Times New Roman Bold"
+                    Content="File Name"
+                    HorizontalAlignment="Center"/>
+
+                <TextBox
+                    x:Name="txtBox_FileName"
+                    Background="White"
+                    BorderBrush="Black"
+                    BorderThickness="0.3"
+                    Width="150"
+                    FontFamily="Times New Roman"/>
+
+                <Label
+                    FontFamily="Times New Roman Bold"
+                    Content="File Path"
+                    HorizontalAlignment="Center"/>
+
+                <Button
+                    x:Name="Btn_AddForm"
+                    BorderBrush="Black"
+                    BorderThickness="0.3"
+                    Content="Select Path"
+                    FontFamily="Times New Roman Bold"
+                    Margin="0, 0, 0, 10"
+                    Width="100"
+                    Click="Btn_AddForm_Click"/>
+                
+                <Button
+                    x:Name="Btn_Submit"
+                    BorderBrush="Black"
+                    BorderThickness="0.3"
+                    Content="Submit"
+                    FontFamily="Times New Roman Bold"
+                    Width="100"
+                    Margin="0, 0, 0, 10"
+                    Click="Btn_Submit_Click"/>
+
+            </StackPanel>
+        </Viewbox>
+    </Grid>
+</Window>

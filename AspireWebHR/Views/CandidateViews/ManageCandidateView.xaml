@@ -43,7 +43,7 @@
             Grid.RowSpan="2"
             Grid.Column="0"
             Grid.ColumnSpan="11"
-            Background="Purple">
+            Background="CadetBlue">
 
             <Viewbox
                 Grid.Row="0"
@@ -59,11 +59,11 @@
                         Margin="0, 0, 50, 0"/>
 
                     <Label
-                        Content="Manage Candidates \ إدارة المجندين"
+                        Content="Candidate Database"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         FontSize="25"
-                        FontFamily="Bahnschrift Bold SemiCondensed"
+                        FontFamily="Times New Roman Bold"
                         Foreground="White"/>
                 </StackPanel>
             </Viewbox>
@@ -76,7 +76,7 @@
             Grid.ColumnSpan="4"
             Height="40"
             FontSize="20"
-            FontFamily="Bahnschrift"
+            FontFamily="Times New Roman"
             TextChanged="txtBox_SearchCandidate_TextChanged">
         </TextBox>
 
@@ -87,12 +87,12 @@
             Grid.ColumnSpan="4"
             Height="40"
             Width="150"
-            FontSize="20"
-            FontFamily="Bahnschrift SemiBold SemiCondensed"
+            FontSize="15"
+            FontFamily="Times New Roman Bold"
             Content="Refresh"
-            BorderThickness="0.3"
-            Click="btn_Refresh_Click">
-        </Button>
+            BorderThickness="0.5"
+            Click="btn_Refresh_Click"/>
+
 
         <ScrollViewer 
             HorizontalScrollBarVisibility="Auto"
@@ -102,7 +102,6 @@
             Grid.RowSpan="8">
             <ListView
                 x:Name="listView_Main"
-                FontFamily="Bahnschrift SemiBold SemiCondensed" 
                 Background="White"
                 BorderThickness="0.3"
                 BorderBrush="Black"
@@ -115,6 +114,7 @@
 
                         <GridViewColumn Header = "Entry Date" Width="200" CellTemplate="{StaticResource CandidateCellTemplateEntryDate}"/>
                         <GridViewColumn Header = "Candidate ID" Width="150" CellTemplate="{StaticResource CandidateCellTemplateCandidateID}" />
+                        <GridViewColumn Header = "Title" Width="250" CellTemplate="{StaticResource CandidateTitle}"/>
                         <GridViewColumn Header = "First Name" Width="250" CellTemplate="{StaticResource CellTemplateFirstName}"/>
                         <GridViewColumn Header = "Middle Name" Width="250" CellTemplate="{StaticResource CellTemplateMiddleName}"/>
                         <GridViewColumn Header = "Last Name" Width="250" CellTemplate="{StaticResource CellTemplateLastName}"/>
@@ -124,7 +124,6 @@
                         <GridViewColumn Header = "Email ID" Width="250" CellTemplate="{StaticResource CellTemplateEmailID}" />
                     </GridView>
                 </ListView.View>
-
             </ListView>
         </ScrollViewer>
 

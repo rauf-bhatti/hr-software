@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AspireWebHR.Views.RecruiterViews"
         mc:Ignorable="d"
-        Title="ManageRecruiterView" Height="800" Width="1000">
+        Title="Manage Leaves" Height="800" Width="1000">
     <Grid
         Background="GhostWhite">
         <Grid.RowDefinitions>
@@ -37,19 +37,36 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="25"/>
         </Grid.ColumnDefinitions>
-        
-        <Button
-            x:Name="btn_Refresh"
-            Grid.Row="2"
-            Grid.Column="3"
-            Grid.ColumnSpan="5"
-            Height="40"
-            Width="150"
-            FontSize="20"
-            FontFamily="Bahnschrift SemiBold SemiCondensed"
-            Content="Refresh"
-            BorderThickness="0.3">
-        </Button>
+
+        <StackPanel
+                Grid.Row="2"
+                Grid.Column="3"
+                Grid.ColumnSpan="5"
+                Orientation="Horizontal">
+
+            <TextBox
+                x:Name="txtBox_SearchLeaves"
+                FontSize="20"
+                FontFamily="Times New Roman"
+                BorderBrush="Black"
+                BorderThickness="0.5"
+                Width="250"
+                Height="40"
+                Margin="0, 0, 50, 0"
+                TextChanged="txtBox_SearchLeaves_TextChanged"/>
+
+
+
+            <Button
+                x:Name="btn_Refresh"
+                Height="40"
+                Width="150"
+                FontSize="20"
+                FontFamily="Times New Roman Bold"
+                Content="Refresh"
+                BorderThickness="0.5"/>
+
+        </StackPanel>
 
 
         <Grid
@@ -57,7 +74,7 @@
             Grid.RowSpan="2"
             Grid.Column="0"
             Grid.ColumnSpan="11"
-            Background="Purple">
+            Background="#dbafbc">
 
             <Viewbox
                 Grid.Row="0"
@@ -73,11 +90,11 @@
                         Margin="0, 0, 50, 0"/>
 
                     <Label
-                        Content="Leave Management \ إدارة المجندين"
+                        Content="Leave Management"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         FontSize="20"
-                        FontFamily="Bahnschrift Bold SemiCondensed"
+                        FontFamily="Times New Roman Bold"
                         Foreground="White"/>
                 </StackPanel>
             </Viewbox>
@@ -91,7 +108,7 @@
             Grid.RowSpan="8">
             <ListView
                 x:Name="listView_Main"
-                FontFamily="Bahnschrift SemiBold SemiCondensed" 
+                FontFamily="Times New Roman" 
                 Background="White"
                 MouseDoubleClick="ListView_Main_MouseDoubleClick">
 

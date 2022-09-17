@@ -29,6 +29,11 @@ namespace AspireWebHR.Views.MiscViews
 
         private void BindDataToGrid()
         {
+            this.ChkBox_Active.IsChecked = false;
+            this.ChkBox_Cancelled.IsChecked = false;
+            this.ChkBox_Completed.IsChecked = false;
+
+
             this.listView_Main.ItemsSource = runtimeController.GetAllJobOpenings();
         }
 
@@ -58,6 +63,7 @@ namespace AspireWebHR.Views.MiscViews
         {
             this.ChkBox_Active.IsChecked = false;
             this.ChkBox_Cancelled.IsChecked = false;
+            this.ChkBox_Hold.IsChecked = false;
 
             BindDataToGrid("Completed");
         }
@@ -66,6 +72,8 @@ namespace AspireWebHR.Views.MiscViews
         {
             this.ChkBox_Completed.IsChecked = false;
             this.ChkBox_Cancelled.IsChecked = false;
+            this.ChkBox_Hold.IsChecked = false;
+
 
             BindDataToGrid("Active");
         }
@@ -74,6 +82,7 @@ namespace AspireWebHR.Views.MiscViews
         {
             this.ChkBox_Completed.IsChecked = false;
             this.ChkBox_Active.IsChecked = false;
+            this.ChkBox_Hold.IsChecked = false;
 
             BindDataToGrid("Cancelled");
         }
@@ -82,5 +91,15 @@ namespace AspireWebHR.Views.MiscViews
         {
             BindDataToGrid();
         }
+
+        private void ChkBox_Hold_Checked(object sender, RoutedEventArgs e)
+        {
+            this.ChkBox_Active.IsChecked = false;
+            this.ChkBox_Cancelled.IsChecked = false;
+            this.ChkBox_Completed.IsChecked = false;
+
+            BindDataToGrid("Hold");
+        }
+
     }
 }

@@ -17,7 +17,7 @@ namespace AspireWebHR.Controllers
                     return 0;
                 }
 
-                while (dataReader.Read())
+                while (dataReader.Read()) //Will always only return ONE record.
                 {
                     RuntimeController.RecruiterFullName = $"{dataReader["FirstName"]} {dataReader["MiddleName"]} {dataReader["LastName"]} ";
                     RuntimeController.RecruiterID = dataReader["EMPLOYEE_ID"];

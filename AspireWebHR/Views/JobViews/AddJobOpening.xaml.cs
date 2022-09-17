@@ -41,7 +41,7 @@ namespace AspireWebHR.Views.MiscViews
             if (jobController.AddJobOpening((DateTime)datePicker_postDate.SelectedDate, txtBox_CompanyName.Text, txtBox_ClientName.Text, txtBox_JobLocation.Text, txtBox_InterviewLocation.Text,
                 RuntimeController.RecruiterID, txtBox_ClientContact.Text, Convert.ToInt32(txtBox_Vacancy.Text), txtBox_Role.Text, Convert.ToInt32(txtBox_SalaryRange.Text), txtBox_Experience.Text,
                 Convert.ToInt32(txtBox_WorkingHours.Text), Convert.ToInt32(txtBox_WorkingDays.Text), Convert.ToInt32(txtBox_WeeklyOff.Text), gender.Content.ToString(),
-                txtBox_Nationality.Text, Convert.ToBoolean(arabicSpeaker.Content), Convert.ToBoolean(accomodation.Content), Convert.ToBoolean(transport.Content), Convert.ToBoolean(meals.Content), inout.Content.ToString(), "Active", 0) == 1)
+                txtBox_Nationality.Text, arabicSpeaker.Content.ToString(), Convert.ToBoolean(accomodation.Content), Convert.ToBoolean(transport.Content), Convert.ToBoolean(meals.Content), inout.Content.ToString(), "Active", 0, txtBox_Remarks.Text) == 1)
             {
                 MessageBox.Show("Successfully inserted record!");
                 this.Close();

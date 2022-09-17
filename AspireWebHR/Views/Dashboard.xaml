@@ -100,7 +100,7 @@
                         x:Name="btn_addCandidate"
                         Content="Add Candidate"
                         Foreground="Black"
-                        FontFamily="Bahnschrift SemiBold SemiCondensed"
+                        FontFamily="Times New Roman Bold"
                         Height="35"
                         Width="250"
                         Background="LightSteelBlue"
@@ -113,7 +113,7 @@
                         x:Name="btn_ManageCandidates"
                         Content="Manage Candidates"
                         Foreground="Black"
-                        FontFamily="Bahnschrift SemiBold SemiCondensed"
+                        FontFamily="Times New Roman Bold"
                         Height="35"
                         Width="250"
                         Background="LightSteelBlue"
@@ -126,7 +126,7 @@
                         x:Name="btn_CurrentOpenings"
                         Content="Manage Current Openings"
                         Foreground="Black"
-                        FontFamily="Bahnschrift SemiBold SemiCondensed"
+                        FontFamily="Times New Roman Bold"
                         Height="35"
                         Width="250"
                         Background="LightSteelBlue"
@@ -153,7 +153,7 @@
                         x:Name="btn_LeaveApplication"                        
                         Content="Apply For Leave"
                         Foreground="Black"
-                        FontFamily="Bahnschrift SemiBold SemiCondensed"
+                        FontFamily="Times New Roman Bold"
                         Height="35"
                         Width="250"
                         Background="LightSteelBlue"
@@ -166,7 +166,7 @@
                         x:Name="btn_LeaveApplicationManagement"                        
                         Content="Leave Application Management"
                         Foreground="Black"
-                        FontFamily="Bahnschrift SemiBold SemiCondensed"
+                        FontFamily="Times New Roman Bold"
                         Height="35"
                         Width="250"
                         Background="LightSteelBlue"
@@ -177,6 +177,7 @@
                     <!--NEW LABEL AND BUTTON GROUP-->
 
                     <Label
+                        x:Name="lbl_HRManagement"
                         Content="Human Resource Management"
                         FontFamily="Bahnschrift Bold SemiCondensed"
                         FontSize="20"
@@ -188,10 +189,36 @@
 
                     <!--Action Buttons For Candidate Management -->
                     <Button
+                        x:Name="Btn_ManageForms"
+                        Content="Manage Forms"
+                        Foreground="Black"
+                        FontFamily="Times New Roman Bold"
+                        Height="35"
+                        Width="250"
+                        Background="LightSteelBlue"
+                        Margin="0, 10, 0, 0"
+                        FontSize="15"
+                        BorderThickness="0.3"
+                        Click="Btn_ManageForms_Click"></Button>
+
+                    <Button
+                        Content="View Recruiters"
+                        x:Name="btn_manageRecruiter"
+                        Foreground="Black"
+                        FontFamily="Times New Roman Bold"
+                        Height="35"
+                        Width="250"
+                        Background="LightSteelBlue"
+                        Margin="0, 10, 0, 0"
+                        BorderThickness="0.3"
+                        FontSize="15"
+                        Click="btn_manageRecruiter_Click"></Button>
+
+                    <Button
                         x:Name="btn_addRecruiter"
                         Content="Add Recruiter"
                         Foreground="Black"
-                        FontFamily="Bahnschrift SemiBold SemiCondensed"
+                        FontFamily="Times New Roman Bold"
                         Height="35"
                         Width="250"
                         Background="LightSteelBlue"
@@ -200,33 +227,18 @@
                         BorderThickness="0.3"
                         Click="btn_addRecruiter_Click"></Button>
 
-
                     <Button
-                        Content="Manage Recruiters"
-                        x:Name="btn_manageRecruiter"
+                        Content="Dept. Management"
+                        x:Name="Btn_ManageDepartment"
                         Foreground="Black"
-                        FontFamily="Bahnschrift SemiBold SemiCondensed"
+                        FontFamily="Times New Roman Bold"
                         Height="35"
                         Width="250"
                         Background="LightSteelBlue"
                         Margin="0, 10, 0, 0"
                         BorderThickness="0.3"
                         FontSize="15"
-                        Click="btn_manageRecruiter_Click"></Button>
-
-                    <Button
-                        Content="Payroll Disbursement"
-                        x:Name="btn_payrollDisbursement"
-                        Foreground="Black"
-                        FontFamily="Bahnschrift SemiBold SemiCondensed"
-                        Height="35"
-                        Width="250"
-                        Background="LightSteelBlue"
-                        Margin="0, 10, 0, 0"
-                        BorderThickness="0.3"
-                        FontSize="15"
-                        Click="btn_manageRecruiter_Click"></Button>
-
+                        Click="Btn_ManageDepartment_Click"></Button>
                 </StackPanel>
             </Viewbox>
         </Grid>
@@ -240,7 +252,7 @@
             BorderBrush="Black">
             
             <Grid
-                Background="Purple">
+                Background="CadetBlue">
 
 
                 <Grid.RowDefinitions>
@@ -267,17 +279,24 @@
                     <StackPanel
                         Orientation="Horizontal">
 
-                        <Image
-                            Source="../assets/profile.png"
-                            Height="100"
-                            Width="150"></Image>
+                        <Button
+                            x:Name="Btn_Settings"
+                            Background="CadetBlue"
+                            BorderBrush="Black"
+                            BorderThickness="0.3"
+                            Click="Btn_Settings_Click">
+                            <Image
+                                Source="../assets/profile.png"
+                                Height="100"
+                                Width="150"></Image>
+                        </Button>
 
 
                         <Label
                             x:Name="lbl_HeaderName"
                             Content="Welcome, Abdul Rauf Bhatti"
                             FontSize="40"
-                            FontFamily="Bahnschrift SemiBold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             Margin="20, 20, 0, 0"
                             Foreground="White"></Label>
                     </StackPanel>
@@ -293,7 +312,6 @@
             Grid.RowSpan="3">
             <ListView
                 x:Name="listView_Main"
-                FontFamily="Bahnschrift SemiBold SemiCondensed" 
                 Background="White"
                 BorderThickness="0.5"
                 BorderBrush="Black">
@@ -303,13 +321,11 @@
                         AllowsColumnReorder="False"
                         ColumnHeaderTemplate="{StaticResource GridHeaderTemplate}">
 
-                        <GridViewColumn Header = "Notification ID" Width="200" CellTemplate="{StaticResource CandidateCellTemplateEntryDate}"/>
-                        <GridViewColumn Header = "Notification Text" Width="450" CellTemplate="{StaticResource CandidateCellTemplateCandidateID}" />
+                        <GridViewColumn Header = "Notification ID" Width="200" CellTemplate="{StaticResource NotificationID}"/>
+                        <GridViewColumn Header = "Notification Text" Width="450" CellTemplate="{StaticResource NotificationText}" />
                     </GridView>
                 </ListView.View>
-
             </ListView>
         </ScrollViewer>
-
     </Grid>
 </Window>

@@ -1,0 +1,139 @@
+﻿<Window x:Class="AspireWebHR.Views.RecruiterViews.ManageDepartments"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AspireWebHR.Views.RecruiterViews"
+        mc:Ignorable="d"
+            Title="Manage Departments" Height="700" Width="800">
+    <Grid
+        Background="GhostWhite">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="25"/>
+        </Grid.ColumnDefinitions>
+
+
+
+        <Viewbox
+            Grid.Row="2"
+            Grid.Column="3"
+            Grid.ColumnSpan="5">
+
+            <StackPanel
+                Orientation="Horizontal">
+
+                <Label
+                    Content="Dept. Name: "
+                    FontFamily="Times New Roman Bold"
+                    FontSize="20"/>
+
+                <TextBox
+                    x:Name="txtBox_DepartmentName"
+                    Width="250"
+                    Margin="0, 0, 30, 0"
+                    FontFamily="Times New Roman Bold"
+                    FontSize="20"/>
+                
+                <Button
+                    x:Name="btn_AddDept"
+                    Height="40"
+                    Width="150"
+                    FontSize="20"
+                    FontFamily="Times New Roman Bold"
+                    Content="Add"
+                    BorderThickness="0.3"
+                    BorderBrush="Black"
+                    Click="btn_AddDept_Click"/>
+
+            </StackPanel>
+            
+        </Viewbox>
+        
+
+
+        <Grid
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="11"
+            Background="#dbafbc">
+
+            <Viewbox
+                Grid.Row="0"
+                Grid.Column="0"
+                Stretch="Uniform">
+
+                <StackPanel
+                    Orientation="Horizontal">
+                    <Image
+                        Source="../../assets/add-recruiter.png"
+                        Height="60"
+                        Width="60"
+                        Margin="0, 0, 50, 0"/>
+
+                    <Label
+                        Content="Department Management"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="20"
+                        FontFamily="Times New Roman Bold"
+                        Foreground="White"/>
+                </StackPanel>
+            </Viewbox>
+        </Grid>
+
+
+
+        <ScrollViewer 
+            HorizontalScrollBarVisibility="Auto"
+            Grid.Column="3"
+            Grid.Row="3"
+            Grid.ColumnSpan="6"
+            Grid.RowSpan="7"
+            Margin="0, 30, 0, 0">
+            <ListView
+                x:Name="listView_Main"
+                FontFamily="Times New Roman Bold" 
+                Background="White"
+                MouseDoubleClick="listView_Main_MouseDoubleClick">
+
+                <ListView.View>
+                    <GridView 
+                        AllowsColumnReorder="False"
+                        ColumnHeaderTemplate="{StaticResource GridHeaderTemplate}">
+
+                        <GridViewColumn Header = "Dept ID" Width="150" CellTemplate="{StaticResource DepartmentCellTemplateID}"/>
+                        <GridViewColumn Header = "Department Name" Width="300" CellTemplate="{StaticResource DepartmentCellTemplateName}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </ScrollViewer>
+
+    </Grid>
+</Window>

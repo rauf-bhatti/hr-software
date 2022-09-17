@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AspireWebHR.Views.MiscViews"
         mc:Ignorable="d"
-        Title="AmountDialog" Height="200" Width="300">
+        Title="Amount Dialog" Height="200" Width="300">
     <Grid
         Background="GhostWhite">
         <Grid.RowDefinitions>
@@ -22,7 +22,7 @@
 
         <Label
             Content="Amount Paid"
-            FontFamily="Bahnschrift Bold SemiCondensed"
+            FontFamily="Times New Roman Bold"
             FontSize="17"
             Grid.Row="0"
             Grid.RowSpan="2"
@@ -38,7 +38,7 @@
             Height="30"
             Width="150"
             Background="White"
-            FontFamily="Bahnschrift"
+            FontFamily="Times New Roman"
             FontSize="15"/>
 
 
@@ -49,7 +49,7 @@
             Height="30"
             Width="80"
             Content="Submit"
-            FontFamily="Bahnschrift Bold SemiCondensed"
+            FontFamily="Times New Roman Bold"
             BorderThickness="0.3"
             BorderBrush="Black"
             Click="btn_Submit_Click"/>

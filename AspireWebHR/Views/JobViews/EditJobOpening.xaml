@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AspireWebHR.Views.MiscViews"
         mc:Ignorable="d"
-        Title="AddRecruiterView" Height="800" Width="1300" ResizeMode="NoResize">
+        Title="Edit Job Opening" Height="800" Width="1300" ResizeMode="NoResize">
     <Grid
         Background="GhostWhite">
         <Grid.RowDefinitions>
@@ -22,7 +22,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
 
         </Grid.RowDefinitions>
 
@@ -45,7 +45,7 @@
             Grid.RowSpan="2"
             Grid.Column="0"
             Grid.ColumnSpan="11"
-            Background="Purple">
+            Background="#ccbbb1">
 
             <Viewbox
                 Grid.Row="0"
@@ -61,11 +61,11 @@
                         Margin="0, 0, 50, 0"/>
 
                     <Label
-                        Content="Add Job Posting \ معلومات الموظف"
+                        Content="Add Job Posting"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         FontSize="25"
-                        FontFamily="Bahnschrift Bold SemiCondensed"
+                        FontFamily="Times New Roman Bold"
                         Foreground="White"/>
                 </StackPanel>
             </Viewbox>
@@ -80,7 +80,9 @@
             Margin="0, 1, 0, 0">
             <StackPanel
                 Orientation="Horizontal">
+                
                 <Button 
+                    x:Name="Btn_Cancel"
                     Content="Cancel" 
                     Height="5" 
                     Width="10" 
@@ -88,9 +90,10 @@
                     BorderThickness="0.1" 
                     BorderBrush="Black" 
                     Margin="0, 1, 5, 0"
-                    FontFamily="Bahnschrift Bold SemiCondensed"
+                    FontFamily="Times New Roman Bold"
                     Background="Red"
-                    Foreground="White"/>
+                    Foreground="White"
+                    Click="Btn_Cancel_Click"/>
                 
                 <Button 
                     x:Name="btn_Complete"
@@ -101,21 +104,38 @@
                     BorderThickness="0.1" 
                     BorderBrush="Black" 
                     Margin="0, 1, 5, 0"
-                    FontFamily="Bahnschrift Bold SemiCondensed"
+                    FontFamily="Times New Roman Bold"
                     Background="Orange"
                     Foreground="White"
                     Click="btn_Complete_Click"/>
+                
                 <Button
+                    x:Name="Btn_Active"
                     Content="Active"
                     Height="5"
                     Width="10"
                     FontSize="1"
                     BorderThickness="0.1"
                     BorderBrush="Black"
-                    Margin="0, 1, 0, 0"
-                    FontFamily="Bahnschrift Bold SemiCondensed"
+                    Margin="0, 1, 5, 0"
+                    FontFamily="Times New Roman Bold"
                     Background="DarkGreen"
-                    Foreground="White"/>
+                    Foreground="White"
+                    Click="Btn_Active_Click"/>
+
+                <Button
+                    x:Name="Btn_Hold"
+                    Content="Hold"
+                    Height="5"
+                    Width="10"
+                    FontSize="1"
+                    BorderThickness="0.1"
+                    BorderBrush="Black"
+                    Margin="0, 1, 0, 0"
+                    FontFamily="Times New Roman Bold"
+                    Background="DarkGoldenrod"
+                    Foreground="White"
+                    Click="Btn_Hold_Click"/>
             </StackPanel>
             
         </Viewbox>
@@ -139,7 +159,7 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Posting Date: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <Viewbox
@@ -151,7 +171,7 @@
                                 BorderBrush="Black"
                                 Margin="0, 0, 5, 0"
                                 FontSize="10"
-                                FontFamily="Bahnschrift"/>
+                                FontFamily="Times New Roman"/>
                         </Viewbox>
                     </StackPanel>
 
@@ -160,7 +180,7 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Company Name: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <TextBox
@@ -168,7 +188,7 @@
                             Height="10"
                             Width="55"
                             BorderThickness="0.3"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"
                             BorderBrush="Black"
                             Margin="0, 0, 5, 0"/>
@@ -178,14 +198,14 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Client Name: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <TextBox
                             x:Name="txtBox_ClientName"
                             Height="10"
                             Width="55"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                            
                             BorderThickness="0.3"
                             BorderBrush="Black"
@@ -196,14 +216,14 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Job Location: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <TextBox
                             x:Name="txtBox_JobLocation"
                             Height="10"
                             Width="55"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                            
                             BorderThickness="0.3"
                             BorderBrush="Black"
@@ -233,14 +253,14 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Interview Location: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <TextBox
                             x:Name="txtBox_InterviewLocation"
                             Height="10"
                             Width="55"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                            
                             BorderThickness="0.3"
                             BorderBrush="Black"
@@ -252,14 +272,14 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Client Contact:"
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <TextBox
                             x:Name="txtBox_ClientContact"
                             Height="10"
                             Width="55"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"
                             BorderThickness="0.3"
                             BorderBrush="Black"
@@ -270,14 +290,14 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Vacancy: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <TextBox
                             x:Name="txtBox_Vacancy"
                             Height="10"
                             Width="55"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"
                             BorderThickness="0.3"
                             BorderBrush="Black"
@@ -288,14 +308,14 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Role: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <TextBox
                             x:Name="txtBox_Role"
                             Height="10"
                             Width="55"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                            
                             BorderThickness="0.3"
                             BorderBrush="Black"
@@ -325,14 +345,14 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Salary Range: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <TextBox
                             x:Name="txtBox_SalaryRange"
                             Height="10"
                             Width="55"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                                            
                             BorderThickness="0.3"
                             BorderBrush="Black"
@@ -344,14 +364,14 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Experience: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <TextBox
                             x:Name="txtBox_Experience"
                             Height="10"
                             Width="55"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                
                             BorderThickness="0.3"
                             BorderBrush="Black"
@@ -362,14 +382,14 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Working Hours: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <TextBox
                             x:Name="txtBox_WorkingHours"
                             Height="10"
                             Width="55"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                
                             BorderThickness="0.3"
                             BorderBrush="Black"
@@ -380,14 +400,14 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Working Days: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <TextBox
                             x:Name="txtBox_WorkingDays"
                             Height="10"
                             Width="55"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                
                             BorderThickness="0.3"
                             BorderBrush="Black"
@@ -417,14 +437,14 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Weekly Off: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <TextBox
                             x:Name="txtBox_WeeklyOff"
                             Height="10"
                             Width="55"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                
                             BorderThickness="0.3"
                             BorderBrush="Black"
@@ -436,7 +456,7 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Gender: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <ComboBox
@@ -445,7 +465,7 @@
                             Width="55"
                             BorderThickness="0.3"
                             BorderBrush="Black"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                            
                             Margin="0, 0, 5, 0">
 
@@ -460,7 +480,7 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Nationality: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <TextBox
@@ -469,7 +489,7 @@
                             Width="55"
                             BorderThickness="0.3"
                             BorderBrush="Black"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                
                             Margin="0, 0, 5, 0"/>
                     </StackPanel>
@@ -477,8 +497,8 @@
                     <StackPanel
                         Orientation="Horizontal">
                         <Label
-                            Content="Arabic Speaker: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            Content="Languages: "
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <ComboBox
@@ -487,11 +507,12 @@
                             Width="55"
                             BorderThickness="0.3"
                             BorderBrush="Black"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                
                             Margin="0, 0, 10, 0">
-                            <ComboBoxItem Name="araTrue" Content="True"/>
-                            <ComboBoxItem Name="araFalse" Content="False"/>
+                            <ComboBoxItem Name="Arabic" Content="Arabic"/>
+                            <ComboBoxItem Name="English" Content="English"/>
+                            <ComboBoxItem Name="Both" Content="Both"/>
                         </ComboBox>
                     </StackPanel>
                 </StackPanel>
@@ -515,7 +536,7 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Accomodation: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <ComboBox
@@ -524,7 +545,7 @@
                             Width="55"
                             BorderThickness="0.3"
                             BorderBrush="Black"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                
                             Margin="0, 0, 10, 0">
                             <ComboBoxItem Name="accTrue" Content="True"/>
@@ -537,7 +558,7 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Transport: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <ComboBox
@@ -546,7 +567,7 @@
                             Width="55"
                             BorderThickness="0.3"
                             BorderBrush="Black"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                
                             Margin="0, 0, 10, 0">
                             <ComboBoxItem Name="traTrue" Content="True"></ComboBoxItem>
@@ -558,7 +579,7 @@
                         Orientation="Horizontal">
                         <Label
                             Content="Meals: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <ComboBox
@@ -567,7 +588,7 @@
                             Width="55"
                             BorderThickness="0.3"
                             BorderBrush="Black"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                
                             Margin="0, 0, 10, 0">
                             <ComboBoxItem Name="meaTrue" Content="True"></ComboBoxItem>
@@ -580,7 +601,7 @@
                         Orientation="Horizontal">
                         <Label
                             Content="IN / OUT: "
-                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontFamily="Times New Roman Bold"
                             FontSize="5"/>
 
                         <ComboBox
@@ -589,7 +610,7 @@
                             Width="55"
                             BorderThickness="0.3"
                             BorderBrush="Black"
-                            FontFamily="Bahnschrift"
+                            FontFamily="Times New Roman"
                             FontSize="5"                
                             Margin="0, 0, 10, 0">
                             <ComboBoxItem Name="IN" Content="IN"></ComboBoxItem>
@@ -604,7 +625,43 @@
 
 
         <Viewbox
-            Grid.Row="9"
+            Grid.Row="8"
+            Grid.RowSpan="3"
+            Grid.Column="1"
+            Grid.ColumnSpan="9"
+            Margin="0, 2.5, 0, 0">
+
+            <Border 
+                BorderBrush="Black"
+                BorderThickness="0.3">
+                <StackPanel
+                    Orientation="Vertical"
+                    HorizontalAlignment="Center">
+
+
+                    <Label
+                        Content="Remarks:"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="5"
+                        FontFamily="Times New Roman Bold"
+                        Foreground="Black"/>
+
+                    <TextBox
+                        x:Name="txtBox_Remarks"
+                        Height="50"
+                        Width="100"
+                        FontFamily="Times New Roman"
+                        FontSize="5"
+                        BorderThickness="0.3">
+                    </TextBox>
+
+                </StackPanel>
+            </Border>
+        </Viewbox>
+
+        <Viewbox
+            Grid.Row="11"
             Grid.Column="1"
             Grid.RowSpan="1"
             Grid.ColumnSpan="10"
@@ -627,7 +684,7 @@
                         Width="60"
                         Content="Modify"
                         FontSize="8"
-                        FontFamily="Bahnschrift Bold SemiCondensed"
+                        FontFamily="Times New Roman Bold"
                         Margin="0, 0, 10, 0"
                         Background="Orange"
                         Foreground="White"
@@ -641,9 +698,10 @@
                         Width="60"
                         Content="Delete"
                         FontSize="8"
-                        FontFamily="Bahnschrift Bold SemiCondensed"
+                        FontFamily="Times New Roman Bold"
                         Background="Red"
-                        Foreground="White"/>
+                        Foreground="White"
+                        Click="btn_DeleteJobOpening_Click"/>
                    
                 </StackPanel>
             </Border>

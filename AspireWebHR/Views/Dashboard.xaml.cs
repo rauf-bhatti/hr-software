@@ -10,6 +10,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using AspireWebHR.Controllers;
+using System.Threading;
+using FluentFTP;
 
 namespace AspireWebHR.Views
 {
@@ -18,64 +20,114 @@ namespace AspireWebHR.Views
     /// </summary>
     public partial class Dashboard : Window
     {
+
+        private NotificationController notificationController = new NotificationController();
+        private RuntimeController runtimeController = new RuntimeController();
         public Dashboard()
         {
             InitializeComponent();
-            InitializeName();
+            InitializeDashboard();
         }
 
-        private void InitializeName()
+        private void InitializeDashboard()
         {
-            this.lbl_HeaderName.Content = $"Welcome, {RuntimeController.RecruiterFullName}";
+            this.lbl_HeaderName.Content = $"Welcome, {RuntimeController.RecruiterFullName}"; //Set the name
+
+            //Configure what can and cannot be seen.
+
+            if (RuntimeController.RecruiterLevel == 1)
+            {
+                this.btn_addRecruiter.Visibility = Visibility.Hidden;
+                this.Btn_ManageDepartment.Visibility = Visibility.Hidden;
+            }
+            UpdateNotifications();
+
+        }
+
+        private void UpdateNotifications()
+        {
+            this.listView_Main.ItemsSource = notificationController.GetNotifications(RuntimeController.RecruiterID);
         }
 
         private void btn_addRecruiter_Click(object sender, RoutedEventArgs e)
         {
             RecruiterViews.AddRecruiterView recruiterView = new RecruiterViews.AddRecruiterView();
-            this.Hide();
-            recruiterView.Show();
-            this.Show();
+            recruiterView.ShowDialog();
+            UpdateNotifications();
         }
 
         private void btn_addCandidate_Click(object sender, RoutedEventArgs e)
         {
             CandidateViews.AddCandidateView candidateView = new CandidateViews.AddCandidateView();
-            candidateView.Show();
-            this.Show();
+            candidateView.ShowDialog();
+            UpdateNotifications();
         }
 
         private void btn_manageRecruiter_Click(object sender, RoutedEventArgs e)
         {
-            RecruiterViews.ManageRecruiterView manageRecruiter = new RecruiterViews.ManageRecruiterView();
-            manageRecruiter.Show();
-            this.Show();
+            if (RuntimeController.RecruiterLevel == 2)
+            {
+                this.btn_manageRecruiter.Content = "View Recruiters";
+                RecruiterViews.ManageRecruiterView manageRecruiter = new RecruiterViews.ManageRecruiterView();
+                manageRecruiter.ShowDialog();
+            }
+            else
+            {
+                this.btn_manageRecruiter.Content = "View Forms";
+                AdminViews.FormManagement.ManageForms manageForms = new AdminViews.FormManagement.ManageForms(runtimeController.GetRecruiterFromID(RuntimeController.RecruiterID));
+                manageForms.ShowDialog();
+            }
+            
+            UpdateNotifications();
         }
 
         private void btn_ManageCandidates_Click(object sender, RoutedEventArgs e)
         {
             CandidateViews.ManageCandidateView manageCandidates = new CandidateViews.ManageCandidateView();
-            manageCandidates.Show();
-            this.Show();
+            manageCandidates.ShowDialog();
+            UpdateNotifications();
         }
 
         private void btn_LeaveApplication_Click(object sender, RoutedEventArgs e)
         {
             RecruiterViews.LeaveApplication leaveApplication = new RecruiterViews.LeaveApplication();
-            leaveApplication.Show();
-            this.Show();
+            leaveApplication.ShowDialog();
+            UpdateNotifications();
         }
 
         private void btn_LeaveApplicationManagement_Click(object sender, RoutedEventArgs e)
         {
             RecruiterViews.LeaveManagement leaveManagement = new RecruiterViews.LeaveManagement();
-            leaveManagement.Show();
-            this.Show();
+            leaveManagement.ShowDialog();
+            UpdateNotifications();
         }
 
         private void btn_CurrentOpenings_Click(object sender, RoutedEventArgs e)
         {
             MiscViews.ViewOpenings viewOpenings = new MiscViews.ViewOpenings();
-            viewOpenings.Show();
+            viewOpenings.ShowDialog();
+            UpdateNotifications();
+        }
+
+        private void Btn_ManageDepartment_Click(object sender, RoutedEventArgs e)
+        {
+            RecruiterViews.ManageDepartments manageDepts = new RecruiterViews.ManageDepartments();
+            manageDepts.ShowDialog();
+            UpdateNotifications();
+        }
+
+        private void Btn_Settings_Click(object sender, RoutedEventArgs e)
+        {
+            RecruiterViews.ChangePassword changePass = new RecruiterViews.ChangePassword(true);
+            changePass.ShowDialog();
+            UpdateNotifications();
+        }
+
+        private void Btn_ManageForms_Click(object sender, RoutedEventArgs e)
+        {
+            AdminViews.FormManagement.FormDashboard formsDashboard = new AdminViews.FormManagement.FormDashboard();
+            formsDashboard.ShowDialog();
+            UpdateNotifications();
         }
     }
 }

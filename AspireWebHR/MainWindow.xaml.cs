@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using AspireWebHR.Views;
 using AspireWebHR.Controllers;
+using AspireWebHR.Views.RecruiterViews;
 
 namespace AspireWebHR
 {
@@ -43,8 +44,15 @@ namespace AspireWebHR
                 return;
             }
 
-            Dashboard viewDashboard = new Dashboard();
+            if (txtBox_Password.Password.Equals("123"))
+            {
+                ChangePassword changePass = new ChangePassword();
+                this.Hide();
+                changePass.ShowDialog();
+            }
+
             this.Hide();
+            Dashboard viewDashboard = new Dashboard();
             viewDashboard.ShowDialog();
             this.Close();
         }

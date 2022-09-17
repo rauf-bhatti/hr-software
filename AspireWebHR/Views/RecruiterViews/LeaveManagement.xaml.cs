@@ -41,5 +41,18 @@ namespace AspireWebHR.Views.RecruiterViews
 
             BindDataToGrid();
         }
+
+        private void txtBox_SearchLeaves_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtBox_SearchLeaves.Text.Equals(""))
+            {
+                BindDataToGrid();
+            }
+            else
+            {
+                this.listView_Main.ItemsSource = leaveController.GetAllLeavesByKey(txtBox_SearchLeaves.Text);
+            }
+
+        }
     }
 }

@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using AspireWebHR.Models;
 using AspireWebHR.Controllers;
 
 namespace AspireWebHR.Views.RecruiterViews
@@ -22,6 +23,32 @@ namespace AspireWebHR.Views.RecruiterViews
         public LeaveApplication()
         {
             InitializeComponent();
+            SetParameters();
+        }
+
+        private void SetParameters()
+        {
+            List<LeaveModel> totalLeaves = leaveController.GetAllLeaves(RuntimeController.RecruiterID);
+
+            int leavesTaken = 0, leavesPending = 0;
+
+            for (int i = 0; i < totalLeaves.Count; i++)
+            {
+                TimeSpan difference = totalLeaves[i].ToDate - totalLeaves[i].FromDate;
+
+                if (totalLeaves[i].ApprovedStatus.Equals("Pending"))
+                {
+                    leavesPending += difference.Days;
+                }
+                else if (totalLeaves[i].ApprovedStatus.Equals("Approved"))
+                {
+                    leavesTaken += difference.Days;
+                }
+            }
+
+            lbl_Taken.Content = $"Leaves Taken: {leavesTaken.ToString()}";
+            lbl_Pending.Content = $"Leaves Pending: {leavesPending.ToString()}";
+            this.listView_Main.ItemsSource = totalLeaves;
         }
 
         private void btn_SubmitLeave_Click(object sender, RoutedEventArgs e)
@@ -36,6 +63,8 @@ namespace AspireWebHR.Views.RecruiterViews
             {
                 MessageBox.Show($"Error applying for leave!");
             }
+
+            SetParameters();
         }
     }
 }

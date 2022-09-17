@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AspireWebHR.Views.RecruiterViews"
         mc:Ignorable="d"
-        Title="ManageRecruiterView" Height="800" Width="1300">
+        Title="Manage Recruiters" Height="800" Width="1300">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="10"/>
@@ -44,7 +44,7 @@
             Grid.ColumnSpan="4"
             Height="40"
             FontSize="20"
-            FontFamily="Bahnschrift"
+            FontFamily="Times New Roman"
             TextChanged="txtBox_SearchEmployee_TextChanged">
         </TextBox>
 
@@ -56,7 +56,7 @@
             Height="40"
             Width="150"
             FontSize="20"
-            FontFamily="Bahnschrift SemiBold SemiCondensed"
+            FontFamily="Times New Roman Bold"
             Content="Refresh"
             BorderThickness="0.3">
         </Button>
@@ -67,7 +67,7 @@
             Grid.RowSpan="2"
             Grid.Column="0"
             Grid.ColumnSpan="11"
-            Background="Purple">
+            Background="#dbafbc">
 
             <Viewbox
                 Grid.Row="0"
@@ -83,11 +83,11 @@
                         Margin="0, 0, 50, 0"/>
 
                     <Label
-                        Content="Manage Recruiters \ إدارة المجندين"
+                        Content="Manage Recruiters"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         FontSize="25"
-                        FontFamily="Bahnschrift Bold SemiCondensed"
+                        FontFamily="Times New Roman Bold"
                         Foreground="White"/>
                 </StackPanel>
             </Viewbox>
@@ -101,7 +101,7 @@
             Grid.RowSpan="8">
             <ListView
                 x:Name="listView_Main"
-                FontFamily="Bahnschrift SemiBold SemiCondensed" 
+                FontFamily="Times New Roman Bold" 
                 Background="GhostWhite"
                 MouseDoubleClick="listView_Main_MouseDoubleClick">
 
@@ -112,6 +112,7 @@
                         
                         <GridViewColumn Header = "Employee ID" Width="150" CellTemplate="{StaticResource CellTemplateEmployeeID}"/>
                         <GridViewColumn Header = "Title" Width="250" CellTemplate="{StaticResource CellTemplateTitle}"/>
+                        
                         <GridViewColumn Header = "First Name" Width="250" CellTemplate="{StaticResource CellTemplateFirstName}"/>
                         <GridViewColumn Header = "Middle Name" Width="250" CellTemplate="{StaticResource CellTemplateMiddleName}"/>
                         <GridViewColumn Header = "Last Name" Width="250" CellTemplate="{StaticResource CellTemplateLastName}"/>

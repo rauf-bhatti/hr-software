@@ -12,10 +12,10 @@ namespace AspireWebHR.Models
         public DateTime ToDate { get; set; }
         public string Reason { get; set; }
         public string Category { get; set; }
-        public bool ApprovedStatus { get; set; }
+        public string ApprovedStatus { get; set; }
 
 
-        public LeaveModel(string EmployeeID, DateTime FromDate, DateTime ToDate, string Reason, string Category, bool ApprovedStatus)
+        public LeaveModel(string EmployeeID, DateTime FromDate, DateTime ToDate, string Reason, string Category, string ApprovedStatus)
         {
             this.EmployeeID = EmployeeID;
             this.FromDate = FromDate;
@@ -25,7 +25,7 @@ namespace AspireWebHR.Models
             this.ApprovedStatus = ApprovedStatus;
         }
 
-        public LeaveModel(int LeaveID, string EmployeeID, DateTime FromDate, DateTime ToDate, string Reason, string Category, bool ApprovedStatus)
+        public LeaveModel(int LeaveID, string EmployeeID, DateTime FromDate, DateTime ToDate, string Reason, string Category, string ApprovedStatus)
         {
             this.LeaveID = LeaveID;
             this.EmployeeID = EmployeeID;
@@ -39,19 +39,19 @@ namespace AspireWebHR.Models
         public string QueryizeInsert()
         {
             return $"INSERT INTO Leaves (EMPLOYEE_ID, FromDate, ToDate, Reason, Category, Approved_Status)" +
-                $" VALUES ('{this.EmployeeID}', '{this.FromDate}', '{this.ToDate}', '{this.Reason}', '{this.Category}', '{this.ApprovedStatus}');";
+                $" VALUES ('{this.EmployeeID}', '{this.FromDate.Year}-{this.FromDate.Month}-{this.FromDate.Day}', '{this.ToDate.Year}-{this.ToDate.Month}-{this.ToDate.Day}', '{this.Reason}', '{this.Category}', '{this.ApprovedStatus}');";
         }
 
         public string QueryizeApprove()
         {
-            this.ApprovedStatus = true;
+            this.ApprovedStatus = "Approved";
             return $"UPDATE Leaves SET Approved_Status = '{this.ApprovedStatus}' WHERE Leave_ID = '{this.LeaveID}'";
         }
 
         public string QueryizeDecline()
         {
-            this.ApprovedStatus = false;
-            return $"DELETE FROM Leaves WHERE Leave_ID = '{this.LeaveID}'";
+            this.ApprovedStatus = "Declined";
+            return $"UPDATE Leaves SET Approved_Status = '{this.ApprovedStatus}' WHERE Leave_ID = '{this.LeaveID}'";
         }
     }
 }

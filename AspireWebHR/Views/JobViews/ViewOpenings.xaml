@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AspireWebHR.Views.MiscViews"
         mc:Ignorable="d"
-        Title="ManageRecruiterView" Height="900" Width="1500">
+        Title="Manage Job Openings" Height="900" Width="1500">
     <Grid
         Background="GhostWhite">
         <Grid.RowDefinitions>
@@ -43,7 +43,7 @@
             Grid.RowSpan="2"
             Grid.Column="0"
             Grid.ColumnSpan="11"
-            Background="Purple">
+            Background="#ccbbb1">
 
             <Viewbox
                 Grid.Row="0"
@@ -59,11 +59,11 @@
                         Margin="0, 0, 50, 0"/>
 
                     <Label
-                        Content="Manage Job Openings \ إدارة المجندين"
+                        Content="Manage Job Openings"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         FontSize="20"
-                        FontFamily="Bahnschrift Bold SemiCondensed"
+                        FontFamily="Times New Roman Bold"
                         Foreground="White"/>
                 </StackPanel>
             </Viewbox>
@@ -79,7 +79,7 @@
             Background="Purple" 
             Foreground="White"
             BorderBrush="Black"
-            FontFamily="Bahnschrift Bold SemiCondensed"
+            FontFamily="Times New Roman Bold"
             BorderThickness="1"
             Click="btn_AddJob_Click"/>
 
@@ -90,7 +90,7 @@
             Content="Active"
             FontSize="12"
             Margin="20, 25, 0, 0"
-            FontFamily="Bahnschrift SemiBold SemiCondensed"
+            FontFamily="Times New Roman SemiBold SemiCondensed"
             Checked="ChkBox_Active_Checked"
             Unchecked="ChkBox_Unchecked"/>
 
@@ -101,7 +101,7 @@
             Content="Completed"
             FontSize="12"
             Margin="20, 25, 0, 0"
-            FontFamily="Bahnschrift SemiBold SemiCondensed"
+            FontFamily="Times New Roman SemiBold SemiCondensed"
             Checked="ChkBox_Completed_Checked"
             Unchecked="ChkBox_Unchecked"/>
 
@@ -112,8 +112,19 @@
             Content="Cancelled"
             FontSize="12"
             Margin="20, 25, 0, 0"
-            FontFamily="Bahnschrift SemiBold SemiCondensed"
+            FontFamily="Times New Roman SemiBold SemiCondensed"
             Checked="ChkBox_Cancelled_Checked"
+            Unchecked="ChkBox_Unchecked"/>
+
+        <CheckBox
+            x:Name="ChkBox_Hold"
+            Grid.Row="2"
+            Grid.Column="7"
+            Content="Hold"
+            FontSize="12"
+            Margin="20, 25, 0, 0"
+            FontFamily="Times New Roman SemiBold SemiCondensed"
+            Checked="ChkBox_Hold_Checked"            
             Unchecked="ChkBox_Unchecked"/>
 
         <ScrollViewer 
@@ -124,7 +135,7 @@
             Grid.RowSpan="8">
             <ListView
                 x:Name="listView_Main"
-                FontFamily="Bahnschrift SemiBold SemiCondensed" 
+                FontFamily="Times New Roman SemiBold SemiCondensed" 
                 Background="White"
                 MouseDoubleClick="listView_Main_MouseDoubleClick">
 
@@ -135,6 +146,7 @@
 
                         <GridViewColumn Header = "Date Posted" Width="200" CellTemplate="{StaticResource OpeningDatePosted}"/>
                         <GridViewColumn Header = "Opening ID" Width="150" CellTemplate="{StaticResource OpeningID}"/>
+                        <GridViewColumn Header = "Handling Employee" Width="200" CellTemplate="{StaticResource HandlingEmployee}"/>
                         <GridViewColumn Header = "Company Name" Width="250" CellTemplate="{StaticResource OpeningCompanyName}"/>
                         <GridViewColumn Header = "Client Name" Width="250" CellTemplate="{StaticResource OpeningClientName}"/>
                         <GridViewColumn Header = "Job Location" Width="250" CellTemplate="{StaticResource OpeningJobLocation}"/>
@@ -149,13 +161,14 @@
                         <GridViewColumn Header = "Weekly Off" Width="250" CellTemplate="{StaticResource OpeningWeeklyOff}"/>
                         <GridViewColumn Header = "Gender" Width="250" CellTemplate="{StaticResource OpeningGender}"/>
                         <GridViewColumn Header = "Nationality" Width="250" CellTemplate="{StaticResource OpeningNationality}"/>
-                        <GridViewColumn Header = "Arabic Speaker" Width="250" CellTemplate="{StaticResource OpeningArabicSpeaker}"/>
+                        <GridViewColumn Header = "Languages" Width="250" CellTemplate="{StaticResource OpeningArabicSpeaker}"/>
                         <GridViewColumn Header = "Accomodation" Width="250" CellTemplate="{StaticResource OpeningAccomodation}"/>
                         <GridViewColumn Header = "Transport" Width="250" CellTemplate="{StaticResource OpeningTransport}"/>
                         <GridViewColumn Header = "Meals" Width="250" CellTemplate="{StaticResource OpeningMeals}"/>
                         <GridViewColumn Header = "IN OUT" Width="250" CellTemplate="{StaticResource OpeningINOUT}"/>
                         <GridViewColumn Header = "Status" Width="250" CellTemplate="{StaticResource OpeningStatus}"/>
                         <GridViewColumn Header = "Amount Paid" Width="250" CellTemplate="{StaticResource OpeningAmountPaid}"/>
+                        <GridViewColumn Header = "Remarks" Width="250" CellTemplate="{StaticResource OpeningAmountPaid}"/>
                     </GridView>
                 </ListView.View>
             </ListView>

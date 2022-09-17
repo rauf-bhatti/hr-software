@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using AspireWebHR.Controllers;
 using AspireWebHR.Models;
+using AspireWebHR.Views.AdminViews.FormManagement;
 
 namespace AspireWebHR.Views.RecruiterViews
 {
@@ -53,8 +54,20 @@ namespace AspireWebHR.Views.RecruiterViews
         private void listView_Main_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             int selectedIndex = listView_Main.SelectedIndex;
-            EditRecruiter editRecruiter = new EditRecruiter(RuntimeController.GetRecruiterFromIndex(selectedIndex));
-            editRecruiter.ShowDialog();
+            RecruiterModel recruiterInstance = RuntimeController.GetRecruiterFromIndex(selectedIndex);
+
+            if (RuntimeController.RecruiterLevel == 1)
+            {
+                ManageForms manageForms = new ManageForms(recruiterInstance);
+                manageForms.ShowDialog();
+            }
+            else
+            {
+                EditRecruiter editRecruiter = new EditRecruiter(recruiterInstance);
+                editRecruiter.ShowDialog();
+            }
+
+            this.txtBox_SearchEmployee.Text = "";
             BindDataToGrid();
         }
     }

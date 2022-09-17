@@ -1,0 +1,265 @@
+﻿<Window x:Class="AspireWebHR.Views.PayrollViews.AddPayslip"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AspireWebHR.Views.PayrollViews"
+        mc:Ignorable="d"
+        Title="AddPayslip" Height="450" Width="750">
+    <Grid
+        Background="GhostWhite">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="25"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="11"
+            Background="Purple">
+
+            <Viewbox
+                Grid.Row="0"
+                Grid.Column="0"
+                Stretch="Uniform">
+
+                <StackPanel
+                    Orientation="Horizontal">
+                    <Image
+                        Source="../../assets/add-recruiter.png"
+                        Height="60"
+                        Width="60"
+                        Margin="0, 0, 50, 0"/>
+
+                    <Label
+                        Content="Generate Payslip"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="25"
+                        FontFamily="Bahnschrift Bold SemiCondensed"
+                        Foreground="White"/>
+                </StackPanel>
+            </Viewbox>
+        </Grid>
+
+        <Viewbox
+            Grid.Row="2"
+            Grid.Column="1"
+            Grid.ColumnSpan="9"
+            Margin="0, 5, 0, 5">
+
+            <Border
+                BorderBrush="Black"
+                BorderThickness="0.3">
+                <StackPanel
+                    Orientation="Horizontal">
+
+                    <Label
+                        Content="Employee Name: "
+                        FontFamily="Bahnschrift Bold"
+                        FontSize="4"/>
+
+                    <Label
+                        Content=""
+                        FontSize="4"
+                        FontFamily="Bahnschrift"/>
+                </StackPanel>
+            </Border>
+
+        </Viewbox>
+        
+        
+        <Viewbox
+            Grid.Row="3"
+            Grid.Column="1"
+            Grid.ColumnSpan="9"
+            Margin="0, 2.5, 0, 0"
+            Stretch="Uniform">
+
+            <Border
+                BorderBrush="Black"
+                BorderThickness="0.3">
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Date: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <Viewbox
+                            Height="10"
+                            Width="60">
+                            <DatePicker 
+                                x:Name="datePicker_Date"
+                                BorderThickness="0.3"
+                                BorderBrush="Black"
+                                Margin="0, 0, 5, 0"
+                                FontSize="10"
+                                FontFamily="Bahnschrift"/>
+                        </Viewbox>
+                    </StackPanel>
+
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Basic Salary: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            Height="10"
+                            Width="55"
+                            BorderThickness="0.3"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Viewbox>
+
+        <Viewbox
+            Grid.Row="4"
+            Grid.Column="1"
+            Grid.ColumnSpan="9"
+            Margin="0, 2.5, 0, 0">
+
+            <Border
+                BorderBrush="Black"
+                BorderThickness="0.3">
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Leaves:"
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            Height="10"
+                            Width="55"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Salary P/D: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            Height="10"
+                            Width="55"
+                            BorderThickness="0.3"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"
+                            BorderBrush="Black"
+                            Margin="0, 0, 5, 0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Viewbox>
+
+        <Viewbox
+            Grid.Row="5"
+            Grid.Column="1"
+            Grid.ColumnSpan="9"
+            Margin="0, 2.5, 0, 0">
+
+            <Border
+                BorderBrush="Black"
+                BorderThickness="0.3">
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Deduction: "
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            Height="10"
+                            Width="55"
+                            BorderThickness="0.3"
+                            BorderBrush="Black"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"
+                            Margin="0, 0, 2, 0"/>
+                    </StackPanel>
+
+
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            Content="Net Salary:"
+                            FontFamily="Bahnschrift Bold SemiCondensed"
+                            FontSize="5"/>
+
+                        <TextBox
+                            Height="10"
+                            Width="55"
+                            BorderThickness="0.3"
+                            FontFamily="Bahnschrift"
+                            FontSize="5"
+                            BorderBrush="Black"
+                            Margin="0, 0, 3, 0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Viewbox>
+
+
+        <Button
+            Grid.Row="7"
+            Grid.Column="4"
+            Grid.ColumnSpan="3"
+            Content="Submit"
+            FontFamily="Bahnschrift Bold Condensed"
+            FontSize="18"
+            Width="150"
+            Height="40"/>
+    </Grid>
+</Window>

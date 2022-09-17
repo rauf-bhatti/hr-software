@@ -1,0 +1,200 @@
+﻿<Window x:Class="AspireWebHR.Views.PayrollViews.IncentiveView.ManageIncentives"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AspireWebHR.Views.PayrollViews.IncentiveView"
+        mc:Ignorable="d"
+        Title="Manage Employee Incentives" Height="450" Width="800">
+    <Grid Background="GhostWhite">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="25"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Grid
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="11"
+            Background="Purple">
+
+            <Viewbox
+                Grid.Row="0"
+                Grid.Column="0"
+                Stretch="Uniform">
+
+                <StackPanel
+                    Orientation="Horizontal">
+                    <Image
+                        Source="../../../assets/add-recruiter.png"
+                        Height="60"
+                        Width="60"
+                        Margin="0, 0, 50, 0"/>
+
+                    <Label
+                        Content="Incentive Management"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="20"
+                        FontFamily="Bahnschrift Bold SemiCondensed"
+                        Foreground="White"/>
+                </StackPanel>
+            </Viewbox>
+        </Grid>
+
+
+        <Viewbox
+            Grid.Row="2"
+            Grid.Column="1"
+            Grid.RowSpan="2"
+            Grid.ColumnSpan="9">
+
+            <Border
+                BorderBrush="Black"
+                BorderThickness="0.5">
+                <StackPanel
+                    Orientation="Vertical"
+                    Background="White"
+                    HorizontalAlignment="Center"
+                    Margin="0, 10, 0, 10">
+
+                    <Label
+                        x:Name="Lbl_EmployeeName"
+                        Content="Name: "
+                        FontFamily="Bahnschrift SemiBold SemiCondensed"
+                        FontSize="20"/>
+
+                    <Label
+                        x:Name="Lbl_EmployeeID"
+                        Content="ID: "
+                        FontFamily="Bahnschrift SemiBold SemiCondensed"
+                        FontSize="20"/>
+
+                    <Label
+                        x:Name="Lbl_EmployeeSalary"
+                        Content="Salary: "
+                        FontFamily="Bahnschrift SemiBold SemiCondensed"
+                        FontSize="20"/>
+                </StackPanel>
+            </Border>
+
+        </Viewbox>
+
+
+        <!-- Add New Incentive Group -->
+        <Viewbox
+            Grid.Row="4"
+            Grid.Column="1"
+            Grid.ColumnSpan="7">
+
+
+            <Border
+                BorderBrush="Black"
+                BorderThickness="1"
+                Margin="2, 2, 2, 2">
+                <StackPanel
+                    Orientation="Horizontal">
+
+                    <Label
+                        Content="Incentive Percentage: "
+                        FontFamily="Bahnschrift SemiBold SemiCondensed"
+                        FontSize="20"/>
+
+                    <TextBox
+                        x:Name="txtBox_IncentivePerc"
+                        Width="250"
+                        Margin="0, 0, 30, 0"
+                        FontFamily="Bahnschrift SemiBold SemiCondensed"
+                        FontSize="20"/>
+
+                    <Label
+                        Content="Date: "
+                        FontFamily="Bahnschrift SemiBold SemiCondensed"
+                        FontSize="20"/>
+
+                    <DatePicker
+                        x:Name="datePicker_Added"
+                        Width="250"
+                        Margin="0, 0, 30, 0"/>
+                </StackPanel>
+            </Border>
+        </Viewbox>
+
+        <Viewbox
+            Grid.Row="4"
+            Grid.Column="7"
+            Grid.ColumnSpan="8">
+
+            <Button
+                x:Name="Btn_AddIncentive"
+                BorderBrush="Black"
+                BorderThickness="0.5"
+                Content="Submit"
+                Width="50"
+                Margin="0, 5, 0, 5"
+                FontFamily="Bahnschrift SemiBold SemiCondensed"
+                Click="Btn_AddIncentive_Click">
+                
+            </Button>
+            
+        </Viewbox>
+
+
+        <!-- Manage Existing Incentives -->
+
+        <ScrollViewer 
+            HorizontalScrollBarVisibility="Auto"
+            Grid.Column="1"
+            Grid.ColumnSpan="9"
+            Grid.Row="5"
+            Grid.RowSpan="7"
+            Margin="0, 30, 0, 0">
+            <ListView
+                x:Name="listView_Main"
+                FontFamily="Bahnschrift SemiBold SemiCondensed" 
+                Background="White"
+                MouseDoubleClick="listView_Main_MouseDoubleClick">
+                <ListView.View>
+                    <GridView 
+                        AllowsColumnReorder="False"
+                        ColumnHeaderTemplate="{StaticResource GridHeaderTemplate}">
+
+                        <GridViewColumn Header = "Incentive ID" Width="100" CellTemplate="{StaticResource IncentiveID}"/>
+                        <GridViewColumn Header = "Incentive Date" Width="150" CellTemplate="{StaticResource IncentiveDate}"/>
+                        <GridViewColumn Header = "Percentage" Width="150" CellTemplate="{StaticResource IncentivePercentage}"/>
+                        <GridViewColumn Header = "Client Status" Width="150" CellTemplate="{StaticResource IncentiveClientStatus}"/>
+                        <GridViewColumn Header = "Aspire Web Status" Width="150" CellTemplate="{StaticResource IncentiveAspireStatus}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </ScrollViewer>
+
+    </Grid>
+</Window>

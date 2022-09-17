@@ -20,6 +20,7 @@ namespace AspireWebHR.Views.RecruiterViews
     {
         private LeaveModel leaveInstance;
         private LeaveController leaveController = new LeaveController();
+        private NotificationController notificationController = new NotificationController();
         public LeaveDialog()
         {
             InitializeComponent();
@@ -36,6 +37,7 @@ namespace AspireWebHR.Views.RecruiterViews
             if (leaveController.ModifyLeaveStatus(leaveInstance.QueryizeApprove()) == 1)
             {
                 MessageBox.Show("Status updated!");
+                notificationController.AddNotification($"Your recent leave was approved by {RuntimeController.RecruiterFullName}!", leaveInstance.EmployeeID);
                 this.Close();
             }
             else
@@ -47,9 +49,11 @@ namespace AspireWebHR.Views.RecruiterViews
 
         private void Btn_Decline_Click(object sender, RoutedEventArgs e)
         {
+
             if (leaveController.ModifyLeaveStatus(leaveInstance.QueryizeDecline()) == 1)
             {
                 MessageBox.Show("Leave cancelled!");
+                notificationController.AddNotification($"Your recent leave was declined by {RuntimeController.RecruiterFullName}!", leaveInstance.EmployeeID);
                 this.Close();
             }
             else

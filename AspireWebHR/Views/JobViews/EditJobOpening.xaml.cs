@@ -52,12 +52,12 @@ namespace AspireWebHR.Views.MiscViews
             txtBox_WorkingDays.Text = jobInstance.WorkingDays.ToString();
             txtBox_WeeklyOff.Text = jobInstance.WeeklyOff.ToString();
             txtBox_Nationality.Text = jobInstance.Nationality;
-
+            txtBox_Remarks.Text = jobInstance.Remarks;
 
             //Indentation of three related characters done so that FindName can be used correctly. The names of respective ComboBox are changed in the 
             //- corresponding XAML file too.
-            cbBox_ArabicSpeaker.SelectedItem = cbBox_ArabicSpeaker.FindName($"ara{jobInstance.ArabicSpeaker}");
-            cbBox_Accomodation.SelectedItem = cbBox_Accomodation.FindName($"acc{jobInstance.ArabicSpeaker}");
+            cbBox_ArabicSpeaker.SelectedItem = cbBox_ArabicSpeaker.FindName($"{jobInstance.Language}");
+            cbBox_Accomodation.SelectedItem = cbBox_Accomodation.FindName($"acc{jobInstance.Accomodation}");
             cbBox_Meals.SelectedItem = cbBox_Meals.FindName($"mea{jobInstance.Meals}");
             cbBox_Transport.SelectedItem = cbBox_Transport.FindName($"tra{jobInstance.Transport}");
 
@@ -80,8 +80,8 @@ namespace AspireWebHR.Views.MiscViews
             if (jobOpeningController.ModifyJobOpening(openingInstance.OpeningID, (DateTime)datePicker_postDate.SelectedDate, txtBox_CompanyName.Text, txtBox_ClientName.Text, txtBox_JobLocation.Text, txtBox_InterviewLocation.Text,
                 RuntimeController.RecruiterID, txtBox_ClientContact.Text, Convert.ToInt32(txtBox_Vacancy.Text), txtBox_Role.Text, Convert.ToInt32(txtBox_SalaryRange.Text), txtBox_Experience.Text,
                 Convert.ToInt32(txtBox_WorkingHours.Text), Convert.ToInt32(txtBox_WorkingDays.Text), Convert.ToInt32(txtBox_WeeklyOff.Text), gender.Content.ToString(),
-                txtBox_Nationality.Text, Convert.ToBoolean(arabicSpeaker.Content), Convert.ToBoolean(accomodation.Content), Convert.ToBoolean(transport.Content),
-                Convert.ToBoolean(meals.Content), inout.Content.ToString(), "Active", 0) == 1)
+                txtBox_Nationality.Text, arabicSpeaker.Content.ToString(), Convert.ToBoolean(accomodation.Content), Convert.ToBoolean(transport.Content),
+                Convert.ToBoolean(meals.Content), inout.Content.ToString(), "Active", 0, txtBox_Remarks.Text) == 1)
             {
                 MessageBox.Show("Record Successfully Modified.");
                 this.Close();
@@ -113,6 +113,68 @@ namespace AspireWebHR.Views.MiscViews
             }
         }
 
-        
+        private void Btn_Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.jobOpeningController.ModifyJobOpening(this.openingInstance.QueryizeStatusUpdate(JobOpeningController.interAmountPaid, "Cancelled")) == 1)
+            {
+                MessageBox.Show("Status successfully updated!");
+                this.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("Error updating status!");
+            }
+        }
+
+        private void Btn_Active_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.jobOpeningController.ModifyJobOpening(this.openingInstance.QueryizeStatusUpdate(JobOpeningController.interAmountPaid, "Active")) == 1)
+            {
+                MessageBox.Show("Status successfully updated!");
+                this.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("Error updating status!");
+            }
+        }
+
+        private void Btn_Hold_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.jobOpeningController.ModifyJobOpening(this.openingInstance.QueryizeStatusUpdate(JobOpeningController.interAmountPaid, "Hold")) == 1)
+            {
+                MessageBox.Show("Status successfully updated!");
+                this.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("Error updating status!");
+            }
+
+        }
+
+        private void btn_DeleteJobOpening_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (this.jobOpeningController.DeleteOpening(this.openingInstance.QueryizeDelete()) == 1)
+                {
+                    _ = MessageBox.Show("Entry deleted!");
+                    this.Close();
+                }
+                else
+                {
+                    _ = MessageBox.Show("Erorr deleting the file!");
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

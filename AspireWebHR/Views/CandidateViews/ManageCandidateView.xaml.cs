@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using AspireWebHR.Controllers;
+using AspireWebHR.Models;
 
 namespace AspireWebHR.Views.CandidateViews
 {
@@ -49,7 +50,14 @@ namespace AspireWebHR.Views.CandidateViews
         private void listView_Main_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             int selectedIndex = listView_Main.SelectedIndex;
-            EditCandidate editRecruiter = new EditCandidate(RuntimeController.GetCandidateFromIndex(selectedIndex));
+
+            CandidateModel candidateInstance = RuntimeController.GetCandidateFromIndex(selectedIndex);
+            if (candidateInstance == null)
+                return;
+
+            EditCandidate editRecruiter = new EditCandidate(candidateInstance);
+
+
             editRecruiter.ShowDialog();
             BindDataToGrid();
         }
